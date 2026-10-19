@@ -1,0 +1,267 @@
+/* Dữ liệu nội dung của Career Navigator.
+   Nhóm có thể sửa trực tiếp file này để thêm câu hỏi hoặc nghề mới. */
+
+window.CN_DATA = {
+  /* 6 nhóm sở thích theo mô hình RIASEC */
+  groups: {
+    R: {
+      code: "R",
+      name: "Kỹ thuật",
+      full: "Kỹ thuật – thực hành",
+      color: "#3168D2",
+      soft: "#E0EEFF",
+      examples: "Lắp ráp, sửa chữa, vận hành thiết bị",
+      fields: ["Cơ khí – chế tạo", "Điện – điện tử", "Xây dựng", "Nông nghiệp công nghệ cao"],
+      why: "Bạn thích làm việc bằng tay, với máy móc, dụng cụ và thấy kết quả cụ thể."
+    },
+    I: {
+      code: "I",
+      name: "Nghiên cứu",
+      full: "Nghiên cứu – khoa học",
+      color: "#1F8579",
+      soft: "#DDF3F0",
+      examples: "Tìm hiểu nguyên nhân, phân tích, thí nghiệm",
+      fields: ["Công nghệ thông tin", "Khoa học tự nhiên", "Y – dược", "Khoa học dữ liệu"],
+      why: "Bạn tò mò, thích đặt câu hỏi, tìm nguyên nhân và giải quyết vấn đề bằng tư duy logic."
+    },
+    A: {
+      code: "A",
+      name: "Sáng tạo",
+      full: "Sáng tạo – nghệ thuật",
+      color: "#7D5BBE",
+      soft: "#EFE8FC",
+      examples: "Vẽ, thiết kế, viết, sáng tạo nội dung",
+      fields: ["Thiết kế – mỹ thuật", "Truyền thông đa phương tiện", "Kiến trúc", "Âm nhạc – biểu diễn"],
+      why: "Bạn thích thể hiện ý tưởng riêng qua hình ảnh, chữ viết, âm thanh hoặc sản phẩm sáng tạo."
+    },
+    S: {
+      code: "S",
+      name: "Xã hội",
+      full: "Xã hội – hỗ trợ con người",
+      color: "#2B915B",
+      soft: "#E8F6E7",
+      examples: "Dạy học, chăm sóc, tư vấn, giúp đỡ người khác",
+      fields: ["Giáo dục", "Y tế – chăm sóc sức khỏe", "Tâm lý – công tác xã hội", "Du lịch – dịch vụ"],
+      why: "Bạn quan tâm đến người khác, thích lắng nghe, hướng dẫn và hỗ trợ mọi người."
+    },
+    E: {
+      code: "E",
+      name: "Quản lý",
+      full: "Kinh doanh – quản lý",
+      color: "#D27A12",
+      soft: "#FFF1DC",
+      examples: "Tổ chức hoạt động, thuyết phục, kinh doanh",
+      fields: ["Quản trị kinh doanh", "Marketing – truyền thông", "Luật", "Khởi nghiệp"],
+      why: "Bạn tự tin, thích dẫn dắt, thuyết phục người khác và biến ý tưởng thành hành động."
+    },
+    C: {
+      code: "C",
+      name: "Nghiệp vụ",
+      full: "Nghiệp vụ – tổ chức",
+      color: "#56647A",
+      soft: "#E9EEF4",
+      examples: "Sắp xếp hồ sơ, xử lý dữ liệu, làm việc theo quy trình",
+      fields: ["Kế toán – kiểm toán", "Tài chính – ngân hàng", "Hành chính – văn phòng", "Logistics"],
+      why: "Bạn cẩn thận, ngăn nắp, thích làm việc có kế hoạch, quy trình và số liệu rõ ràng."
+    }
+  },
+
+  order: ["R", "I", "A", "S", "E", "C"],
+
+  /* Câu 1: mỗi nhóm có 3 hoạt động để kết quả ổn định hơn
+     (6 hoạt động đầu tiên giống bộ câu hỏi trong tài liệu hướng dẫn). */
+  questions: [
+    { g: "R", text: "Lắp ráp, sửa chữa thiết bị" },
+    { g: "I", text: "Tìm hiểu nguyên nhân và giải quyết vấn đề" },
+    { g: "A", text: "Vẽ, thiết kế hoặc sáng tạo sản phẩm" },
+    { g: "S", text: "Hướng dẫn và giúp đỡ người khác" },
+    { g: "E", text: "Tổ chức hoạt động, thuyết phục người khác" },
+    { g: "C", text: "Sắp xếp dữ liệu và hồ sơ theo quy trình" },
+    { g: "R", text: "Dùng dụng cụ, máy móc để tự làm ra một sản phẩm" },
+    { g: "I", text: "Làm thí nghiệm, quan sát các hiện tượng tự nhiên" },
+    { g: "A", text: "Viết truyện, làm thơ, quay và dựng video" },
+    { g: "S", text: "Lắng nghe, chia sẻ khi bạn bè gặp khó khăn" },
+    { g: "E", text: "Làm trưởng nhóm, dẫn dắt cả đội hoàn thành nhiệm vụ" },
+    { g: "C", text: "Lập kế hoạch, thời gian biểu chi tiết cho công việc" },
+    { g: "R", text: "Làm việc ngoài trời, trồng cây hoặc chăm sóc vật nuôi" },
+    { g: "I", text: "Giải bài toán khó, câu đố logic hoặc lập trình" },
+    { g: "A", text: "Chơi nhạc, hát, diễn kịch hoặc nhảy" },
+    { g: "S", text: "Tham gia hoạt động tình nguyện, chăm sóc người khác" },
+    { g: "E", text: "Lên ý tưởng bán hàng hoặc một dự án kinh doanh nhỏ" },
+    { g: "C", text: "Làm việc với bảng tính, số liệu và kiểm tra lỗi" }
+  ],
+
+  scale: [
+    { v: 1, label: "Rất không thích" },
+    { v: 2, label: "Không thích" },
+    { v: 3, label: "Bình thường" },
+    { v: 4, label: "Thích" },
+    { v: 5, label: "Rất thích" }
+  ],
+
+  /* Danh mục nghề. Nhóm thay hoặc bổ sung bằng nghề đã nghiên cứu và kiểm chứng. */
+  careers: [
+    {
+      id: "ky-thuat-vien-dien", g: "R", also: ["I"],
+      name: "Kỹ thuật viên điện", field: "Điện – điện tử",
+      short: "Lắp đặt, kiểm tra và bảo trì hệ thống, thiết bị điện.",
+      work: "Lắp đặt đường dây, thiết bị điện; đo kiểm, phát hiện và sửa chữa sự cố; bảo trì định kỳ để hệ thống vận hành an toàn.",
+      skills: "Hiểu biết về mạch điện, đọc bản vẽ kỹ thuật, khéo léo, cẩn thận, tuân thủ an toàn lao động.",
+      subjects: "Vật lý, Công nghệ, Toán",
+      study: "Tìm hiểu ngành Điện công nghiệp, Điện dân dụng tại các trường trung cấp, cao đẳng nghề hoặc ngành Kỹ thuật điện tại đại học."
+    },
+    {
+      id: "ky-thuat-vien-o-to", g: "R", also: ["I"],
+      name: "Kỹ thuật viên ô tô", field: "Cơ khí – động lực",
+      short: "Kiểm tra, bảo dưỡng và sửa chữa xe ô tô.",
+      work: "Chẩn đoán lỗi động cơ, hệ thống điện và khung gầm; bảo dưỡng định kỳ; thay thế phụ tùng; sử dụng thiết bị chẩn đoán hiện đại.",
+      skills: "Kỹ năng thực hành cơ khí, tư duy tìm lỗi, sử dụng máy móc, kiên nhẫn và tỉ mỉ.",
+      subjects: "Vật lý, Công nghệ, Tin học",
+      study: "Tìm hiểu ngành Công nghệ ô tô tại trường trung cấp, cao đẳng hoặc đại học kỹ thuật."
+    },
+    {
+      id: "ky-su-xay-dung", g: "R", also: ["I", "C"],
+      name: "Kỹ sư xây dựng", field: "Xây dựng",
+      short: "Thiết kế, giám sát thi công nhà và công trình.",
+      work: "Tính toán kết cấu, lập bản vẽ, dự toán vật liệu; giám sát công trường, đảm bảo chất lượng và an toàn thi công.",
+      skills: "Toán và tư duy không gian, đọc và vẽ bản vẽ kỹ thuật, quản lý công việc, làm việc nhóm.",
+      subjects: "Toán, Vật lý, Công nghệ",
+      study: "Tìm hiểu ngành Kỹ thuật xây dựng tại các trường đại học hoặc cao đẳng xây dựng."
+    },
+    {
+      id: "ky-su-phan-mem", g: "I", also: ["R", "A"],
+      name: "Kỹ sư phần mềm", field: "Công nghệ thông tin",
+      short: "Xây dựng và kiểm thử ứng dụng, phần mềm.",
+      work: "Thiết kế, xây dựng và kiểm thử phần mềm; tìm và sửa lỗi; phối hợp với nhóm để phát triển sản phẩm theo nhu cầu người dùng.",
+      skills: "Tư duy logic, giải quyết vấn đề, lập trình, tiếng Anh chuyên ngành, làm việc nhóm.",
+      subjects: "Toán, Tin học, Tiếng Anh",
+      study: "Tìm hiểu ngành Kỹ thuật phần mềm, Công nghệ thông tin tại trường cao đẳng hoặc đại học."
+    },
+    {
+      id: "ky-thuat-vien-phong-thi-nghiem", g: "I", also: ["R", "C"],
+      name: "Kỹ thuật viên phòng thí nghiệm", field: "Khoa học ứng dụng",
+      short: "Hỗ trợ thí nghiệm, phân tích mẫu và ghi dữ liệu.",
+      work: "Chuẩn bị dụng cụ, hóa chất; thực hiện xét nghiệm, phân tích mẫu theo quy trình; ghi chép và báo cáo kết quả chính xác.",
+      skills: "Cẩn thận, chính xác, quan sát tốt, hiểu biết về hóa học – sinh học, tuân thủ quy trình an toàn.",
+      subjects: "Hóa học, Sinh học, Toán",
+      study: "Tìm hiểu ngành Kỹ thuật xét nghiệm, Công nghệ sinh học, Công nghệ kỹ thuật hóa học tại cao đẳng hoặc đại học."
+    },
+    {
+      id: "chuyen-vien-phan-tich-du-lieu", g: "I", also: ["C"],
+      name: "Chuyên viên phân tích dữ liệu", field: "Khoa học dữ liệu",
+      short: "Thu thập và phân tích số liệu để hỗ trợ ra quyết định.",
+      work: "Thu thập, làm sạch và phân tích dữ liệu; tạo biểu đồ, báo cáo; tìm ra xu hướng giúp tổ chức đưa ra quyết định tốt hơn.",
+      skills: "Toán thống kê, bảng tính, lập trình cơ bản, tư duy phản biện, trình bày rõ ràng.",
+      subjects: "Toán, Tin học, Tiếng Anh",
+      study: "Tìm hiểu ngành Khoa học dữ liệu, Hệ thống thông tin, Thống kê tại các trường đại học."
+    },
+    {
+      id: "thiet-ke-do-hoa", g: "A", also: ["E"],
+      name: "Nhà thiết kế đồ họa", field: "Thiết kế – mỹ thuật",
+      short: "Tạo hình ảnh và nội dung số cho sản phẩm, thương hiệu.",
+      work: "Thiết kế logo, poster, giao diện, ấn phẩm truyền thông; làm việc với khách hàng để hiểu ý tưởng và chỉnh sửa sản phẩm.",
+      skills: "Sáng tạo, cảm nhận màu sắc và bố cục, sử dụng công cụ thiết kế, giao tiếp và nhận góp ý.",
+      subjects: "Mỹ thuật, Tin học, Ngữ văn",
+      study: "Tìm hiểu ngành Thiết kế đồ họa, Thiết kế đa phương tiện tại trường cao đẳng hoặc đại học mỹ thuật, công nghệ."
+    },
+    {
+      id: "kien-truc-su", g: "A", also: ["R", "I"],
+      name: "Kiến trúc sư", field: "Kiến trúc",
+      short: "Thiết kế không gian sống, nhà ở và công trình.",
+      work: "Lên ý tưởng, vẽ phác thảo và bản vẽ kiến trúc; dựng mô hình 3D; phối hợp với kỹ sư để hiện thực hóa công trình.",
+      skills: "Vẽ tay, tư duy không gian, thẩm mỹ, phần mềm thiết kế, hiểu biết về vật liệu và kỹ thuật.",
+      subjects: "Toán, Mỹ thuật, Vật lý",
+      study: "Tìm hiểu ngành Kiến trúc tại các trường đại học kiến trúc hoặc xây dựng (thường có thi năng khiếu vẽ)."
+    },
+    {
+      id: "sang-tao-noi-dung-so", g: "A", also: ["E", "S"],
+      name: "Nhà sáng tạo nội dung số", field: "Truyền thông đa phương tiện",
+      short: "Viết, quay và dựng nội dung cho các nền tảng số.",
+      work: "Lên ý tưởng, viết kịch bản, quay và dựng video, viết bài; theo dõi phản hồi của người xem để cải thiện nội dung.",
+      skills: "Kể chuyện, viết tốt, quay dựng cơ bản, bắt xu hướng, hiểu biết về an toàn và văn hóa mạng.",
+      subjects: "Ngữ văn, Tin học, Mỹ thuật",
+      study: "Tìm hiểu ngành Truyền thông đa phương tiện, Báo chí, Quan hệ công chúng tại cao đẳng hoặc đại học."
+    },
+    {
+      id: "giao-vien", g: "S", also: ["A", "E"],
+      name: "Giáo viên", field: "Giáo dục",
+      short: "Hỗ trợ học sinh học tập và phát triển.",
+      work: "Soạn bài, giảng dạy, tổ chức hoạt động học tập; đánh giá sự tiến bộ và đồng hành cùng học sinh, phụ huynh.",
+      skills: "Giao tiếp, thuyết trình, kiên nhẫn, thấu hiểu học sinh, kiến thức vững về môn dạy.",
+      subjects: "Môn học muốn giảng dạy, Ngữ văn",
+      study: "Tìm hiểu các ngành Sư phạm tại trường đại học hoặc cao đẳng sư phạm."
+    },
+    {
+      id: "dieu-duong", g: "S", also: ["I", "C"],
+      name: "Điều dưỡng", field: "Y tế – chăm sóc sức khỏe",
+      short: "Chăm sóc, theo dõi và hỗ trợ người bệnh.",
+      work: "Theo dõi sức khỏe người bệnh, thực hiện chăm sóc theo chỉ định; hỗ trợ bác sĩ; hướng dẫn người bệnh và gia đình.",
+      skills: "Tận tâm, cẩn thận, chịu áp lực, giao tiếp tốt, kiến thức về sinh học và y khoa.",
+      subjects: "Sinh học, Hóa học",
+      study: "Tìm hiểu ngành Điều dưỡng tại trường cao đẳng hoặc đại học y – dược."
+    },
+    {
+      id: "tu-van-tam-ly", g: "S", also: ["I"],
+      name: "Chuyên viên tư vấn tâm lý", field: "Tâm lý học",
+      short: "Lắng nghe, hỗ trợ mọi người vượt qua khó khăn.",
+      work: "Trò chuyện, lắng nghe và hỗ trợ người cần giúp đỡ; tổ chức hoạt động kỹ năng sống; phối hợp với gia đình, nhà trường.",
+      skills: "Lắng nghe, thấu cảm, giữ bí mật, giao tiếp, hiểu biết về tâm lý con người.",
+      subjects: "Ngữ văn, Giáo dục công dân, Sinh học",
+      study: "Tìm hiểu ngành Tâm lý học, Tâm lý học giáo dục, Công tác xã hội tại các trường đại học."
+    },
+    {
+      id: "chuyen-vien-marketing", g: "E", also: ["A", "S"],
+      name: "Chuyên viên marketing", field: "Marketing – truyền thông",
+      short: "Tìm hiểu nhu cầu khách hàng và truyền thông sản phẩm.",
+      work: "Nghiên cứu thị trường, lên kế hoạch quảng bá; tổ chức chiến dịch trên mạng xã hội, sự kiện; đo lường hiệu quả.",
+      skills: "Sáng tạo, giao tiếp, thuyết phục, phân tích số liệu cơ bản, làm việc nhóm.",
+      subjects: "Ngữ văn, Toán, Tiếng Anh",
+      study: "Tìm hiểu ngành Marketing, Quản trị kinh doanh tại cao đẳng hoặc đại học kinh tế."
+    },
+    {
+      id: "to-chuc-su-kien", g: "E", also: ["S", "C"],
+      name: "Chuyên viên tổ chức sự kiện", field: "Quản trị dịch vụ",
+      short: "Lên kế hoạch và điều phối các sự kiện.",
+      work: "Lên ý tưởng chương trình, lập kế hoạch và ngân sách; làm việc với đối tác; điều phối đội ngũ trong ngày diễn ra sự kiện.",
+      skills: "Tổ chức, lãnh đạo, giao tiếp, xử lý tình huống nhanh, quản lý thời gian.",
+      subjects: "Ngữ văn, Tiếng Anh, Toán",
+      study: "Tìm hiểu ngành Quản trị sự kiện, Quản trị dịch vụ du lịch và lữ hành tại cao đẳng hoặc đại học."
+    },
+    {
+      id: "nha-quan-ly-kinh-doanh", g: "E", also: ["C"],
+      name: "Chuyên viên kinh doanh", field: "Quản trị kinh doanh",
+      short: "Tìm kiếm khách hàng và phát triển doanh số.",
+      work: "Tìm hiểu nhu cầu khách hàng, giới thiệu sản phẩm, đàm phán; chăm sóc khách hàng và báo cáo kết quả kinh doanh.",
+      skills: "Giao tiếp, thuyết phục, đàm phán, tự tin, đặt mục tiêu và theo đuổi đến cùng.",
+      subjects: "Toán, Ngữ văn, Tiếng Anh",
+      study: "Tìm hiểu ngành Quản trị kinh doanh, Kinh doanh thương mại tại cao đẳng hoặc đại học."
+    },
+    {
+      id: "ke-toan", g: "C", also: ["I"],
+      name: "Kế toán", field: "Kế toán – kiểm toán",
+      short: "Ghi chép, theo dõi thu chi và lập báo cáo tài chính.",
+      work: "Ghi chép chứng từ, theo dõi thu chi; lập báo cáo tài chính, báo cáo thuế; kiểm tra số liệu chính xác theo quy định.",
+      skills: "Cẩn thận, trung thực, giỏi tính toán, sử dụng bảng tính và phần mềm kế toán.",
+      subjects: "Toán, Tin học",
+      study: "Tìm hiểu ngành Kế toán, Kiểm toán tại trường trung cấp, cao đẳng hoặc đại học kinh tế."
+    },
+    {
+      id: "hanh-chinh-van-phong", g: "C", also: ["S"],
+      name: "Nhân viên hành chính – văn phòng", field: "Hành chính – văn phòng",
+      short: "Quản lý hồ sơ, giấy tờ và hỗ trợ vận hành tổ chức.",
+      work: "Soạn thảo, lưu trữ văn bản; sắp xếp lịch làm việc; quản lý hồ sơ, tài sản văn phòng; hỗ trợ các phòng ban.",
+      skills: "Ngăn nắp, tin học văn phòng, soạn thảo văn bản, giao tiếp lịch sự, quản lý thời gian.",
+      subjects: "Ngữ văn, Tin học",
+      study: "Tìm hiểu ngành Quản trị văn phòng, Văn thư – lưu trữ tại trung cấp, cao đẳng hoặc đại học."
+    },
+    {
+      id: "chuyen-vien-logistics", g: "C", also: ["E"],
+      name: "Chuyên viên logistics", field: "Logistics – chuỗi cung ứng",
+      short: "Điều phối vận chuyển, kho bãi và hàng hóa.",
+      work: "Lên kế hoạch vận chuyển, theo dõi đơn hàng, quản lý kho; xử lý chứng từ xuất nhập khẩu; phối hợp với đối tác.",
+      skills: "Tổ chức, xử lý số liệu, tiếng Anh, giải quyết vấn đề, làm việc theo quy trình.",
+      subjects: "Toán, Tiếng Anh, Địa lý",
+      study: "Tìm hiểu ngành Logistics và quản lý chuỗi cung ứng tại cao đẳng hoặc đại học."
+    }
+  ]
+};

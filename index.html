@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career Navigator</title>
+  <meta name="description" content="Career Navigator: Khám phá sở thích - Tìm hiểu nghề nghiệp - Xây dựng thương mại. Công cụ hướng nghiệp cho học sinh THCS và THPT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233168D2'/%3E%3Cpath d='M32 12l8 20-8 20-8-20z' fill='%23fff'/%3E%3Cpath d='M32 32l8 0-8 20z' fill='%23F5A442'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#main">Bỏ qua điều hướng</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Career Navigator – Trang chủ">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M20 7l5 13-5 13-5-13z" fill="currentColor"/><path d="M20 20h5l-5 13z" fill="#F5A442"/></svg>
+        </span>
+        <span class="brand-text">Career <b>Navigator</b></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
+        <a href="#home">Trang chủ</a>
+        <a href="#survey">Khảo sát</a>
+        <a href="#results">Kết quả</a>
+        <a href="#careers">Nghề nghiệp</a>
+        <a href="#plan">Kế hoạch</a>
+        <a href="#survey" class="btn btn-primary btn-sm nav-cta">Bắt đầu ngay</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. TRANG CHỦ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Hướng nghiệp cho học sinh THCS &amp; THPT</p>
+          <h1>Career <span>Navigator</span></h1>
+          <p class="slogan">
+            <span>Khám phá sở thích</span>
+            <i aria-hidden="true">•</i>
+            <span>Tìm hiểu nghề nghiệp</span>
+            <i aria-hidden="true">•</i>
+            <span>Xây dựng thương mại</span>
+          </p>
+          <p class="lead">Trả lời vài câu hỏi về những hoạt động bạn yêu thích, xem nhóm sở thích nổi bật của mình, tìm hiểu các nghề phù hợp và tự lập kế hoạch cho bước tiếp theo.</p>
+          <div class="hero-actions">
+            <a href="#survey" class="btn btn-primary btn-lg">Bắt đầu khảo sát
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#careers" class="btn btn-outline btn-lg">Khám phá nghề nghiệp</a>
+            <a href="#plan" class="btn btn-ghost btn-lg">Kế hoạch của tôi</a>
+          </div>
+          <ul class="hero-stats" aria-label="Điểm nổi bật">
+            <li><b>6</b><span>nhóm sở thích</span></li>
+            <li><b>18</b><span>câu hỏi ngắn</span></li>
+            <li><b>18</b><span>nghề để khám phá</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="compass-card">
+            <div class="compass">
+              <svg viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="92" class="ring"/>
+                <circle cx="100" cy="100" r="70" class="ring ring-2"/>
+                <g class="needle"><path d="M100 30l14 70-14 70-14-70z" fill="#3168D2"/><path d="M100 100h14l-14 70z" fill="#F5A442"/></g>
+                <circle cx="100" cy="100" r="7" fill="#1C355E"/>
+              </svg>
+              <span class="pt pt-r">R</span><span class="pt pt-i">I</span><span class="pt pt-a">A</span>
+              <span class="pt pt-s">S</span><span class="pt pt-e">E</span><span class="pt pt-c">C</span>
+            </div>
+            <div class="mini-result">
+              <p class="mini-title">Bạn có thể</p>
+              <ul>
+                <li><span class="dot" style="--c:#3168D2"></span>Khám phá 6 nhóm sở thích</li>
+                <li><span class="dot" style="--c:#1F8579"></span>Xem nghề để tìm hiểu thêm</li>
+                <li><span class="dot" style="--c:#7D5BBE"></span>Lập kế hoạch bước tiếp theo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ol class="journey" aria-label="Hành trình 5 bước">
+          <li><a href="#survey"><span class="step">1</span><b>Khảo sát</b><small>Đánh giá mức độ yêu thích các hoạt động</small></a></li>
+          <li><a href="#results"><span class="step">2</span><b>Kết quả</b><small>Xem nhóm sở thích nổi bật</small></a></li>
+          <li><a href="#careers"><span class="step">3</span><b>Chọn nghề</b><small>Lọc nghề theo nhóm sở thích</small></a></li>
+          <li><a href="#careers"><span class="step">4</span><b>Hồ sơ nghề</b><small>Công việc, kỹ năng, hướng học</small></a></li>
+          <li><a href="#plan"><span class="step">5</span><b>Kế hoạch</b><small>Tự đặt bước tiếp theo</small></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6 NHÓM SỞ THÍCH -->
+    <section class="section" id="riasec">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Mô hình RIASEC</p>
+          <h2>6 nhóm sở thích nghề nghiệp</h2>
+          <p>Mỗi người thường có vài nhóm sở thích nổi bật. Đây là gợi ý để bạn tìm hiểu thêm, không phải danh sách nghề cố định.</p>
+        </header>
+        <div class="group-grid" id="group-grid"></div>
+      </div>
+    </section>
+
+    <!-- 2. KHẢO SÁT -->
+    <section class="section section-tint" id="survey">
+      <div class="container narrow">
+        <header class="section-head">
+          <p class="eyebrow">Bước 1 • Khảo sát sở thích</p>
+          <h2>Khám phá sở thích của bạn</h2>
+          <p>Bạn thích mức độ nào đối với các hoạt động sau? Hãy trả lời theo cảm nhận thật của mình, không có đáp án đúng hay sai.</p>
+        </header>
+
+        <form class="survey card" id="survey-form" novalidate>
+          <div class="survey-top">
+            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="18" aria-valuenow="0" aria-label="Tiến độ khảo sát">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p class="progress-text"><b id="progress-count">0</b>/<span id="progress-total">18</span> câu</p>
+          </div>
+          <p class="scale-legend"><span>1 = Rất không thích</span><span>3 = Bình thường</span><span>5 = Rất thích</span></p>
+
+          <div id="question-list" class="question-list"></div>
+
+          <fieldset class="extra">
+            <legend>Bạn muốn tìm hiểu thêm lĩnh vực nào? <small>(không bắt buộc, chọn nhiều)</small></legend>
+            <div class="chips" id="interest-chips"></div>
+          </fieldset>
+
+          <div class="survey-actions">
+            <button type="button" class="btn btn-ghost" id="survey-reset">Làm lại</button>
+            <button type="submit" class="btn btn-primary btn-lg" id="survey-submit">Xem kết quả</button>
+          </div>
+          <p class="form-msg" id="survey-msg" role="alert"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 3. KẾT QUẢ -->
+    <section class="section" id="results">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Bước 2 • Kết quả khám phá</p>
+          <h2>Nhóm sở thích nổi bật của bạn</h2>
+          <p>Kết quả được tính ngay trên máy của bạn từ câu trả lời khảo sát và không gửi đi đâu cả.</p>
+        </header>
+
+        <div class="results-empty card" id="results-empty">
+          <div class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>Bạn chưa làm khảo sát</h3>
+          <p>Hoàn thành 18 câu hỏi ngắn để xem nhóm sở thích nổi bật và các lĩnh vực gợi ý dành cho bạn.</p>
+          <a href="#survey" class="btn btn-primary">Bắt đầu khảo sát</a>
+        </div>
+
+        <div class="results-grid" id="results-content" hidden>
+          <div class="card chart-card">
+            <div class="card-head">
+              <h3>Điểm sở thích theo nhóm</h3>
+              <span class="badge" id="holland-code"></span>
+            </div>
+            <ul class="bars" id="result-bars"></ul>
+            <p class="note">Thang điểm 1–5, là trung bình của 3 hoạt động trong mỗi nhóm.</p>
+          </div>
+          <div class="results-side">
+            <div class="card highlight-card" id="top-card"></div>
+            <div class="card why-card">
+              <h3>Vì sao được gợi ý?</h3>
+              <p id="why-text"></p>
+              <p class="disclaimer">Đây là gợi ý để tìm hiểu thêm, không phải kết luận chắc chắn. Hãy trao đổi thêm với thầy cô, gia đình và trải nghiệm thực tế.</p>
+            </div>
+            <div class="results-actions">
+              <a href="#careers" class="btn btn-primary" id="explore-matched">Khám phá nghề phù hợp</a>
+              <button type="button" class="btn btn-ghost" id="print-result">In kết quả</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CHỌN NGHỀ -->
+    <section class="section section-tint" id="careers">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Bước 3 • Chọn nghề để tìm hiểu</p>
+          <h2>Khám phá nghề nghiệp</h2>
+          <p>Lọc theo nhóm sở thích hoặc tìm theo tên. Bấm <b>Xem chi tiết</b> để mở hồ sơ nghề.</p>
+        </header>
+
+        <div class="career-tools">
+          <div class="filter-chips" id="career-filters" role="group" aria-label="Lọc theo nhóm sở thích"></div>
+          <label class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <span class="sr-only">Tìm nghề</span>
+            <input type="search" id="career-search" placeholder="Tìm nghề, ví dụ: thiết kế">
+          </label>
+        </div>
+        <p class="match-hint" id="match-hint" hidden></p>
+        <div class="career-grid" id="career-grid"></div>
+        <p class="empty-line" id="career-empty" hidden>Chưa có nghề phù hợp với từ khóa. Hãy thử từ khác nhé.</p>
+        <p class="note center">Không thấy nghề bạn muốn tìm? Hãy ghi lại trong <a href="#plan">Kế hoạch của tôi</a> để cùng thầy cô tìm hiểu thêm.</p>
+      </div>
+    </section>
+
+    <!-- 5. KẾ HOẠCH -->
+    <section class="section" id="plan">
+      <div class="container narrow">
+        <header class="section-head">
+          <p class="eyebrow">Bước 5 • Kế hoạch của bạn</p>
+          <h2>Kế hoạch phát triển bản thân</h2>
+          <p>Tự xác định bước tiếp theo để khám phá nghề nghiệp. Kế hoạch được lưu trên trình duyệt của bạn.</p>
+        </header>
+
+        <form class="card plan-form" id="plan-form">
+          <ol class="plan-list">
+            <li>
+              <span class="plan-num">1</span>
+              <label for="p-career">Nghề / lĩnh vực muốn tìm hiểu</label>
+              <input id="p-career" name="career" type="text" placeholder="Ví dụ: Thiết kế đồ họa" list="career-options">
+              <datalist id="career-options"></datalist>
+            </li>
+            <li>
+              <span class="plan-num">2</span>
+              <label for="p-skills">Kỹ năng muốn rèn luyện</label>
+              <input id="p-skills" name="skills" type="text" placeholder="Ví dụ: Sử dụng công cụ thiết kế; sáng tạo">
+            </li>
+            <li>
+              <span class="plan-num">3</span>
+              <label for="p-actions">Việc sẽ thực hiện</label>
+              <textarea id="p-actions" name="actions" rows="2" placeholder="Ví dụ: Tìm hiểu chương trình đào tạo; thử làm một sản phẩm nhỏ"></textarea>
+            </li>
+            <li>
+              <span class="plan-num">4</span>
+              <label for="p-sources">Nguồn cần tìm</label>
+              <input id="p-sources" name="sources" type="text" placeholder="Ví dụ: Website trường đào tạo; tài liệu hướng nghiệp">
+            </li>
+            <li>
+              <span class="plan-num">5</span>
+              <label for="p-time">Thời gian dự kiến</label>
+              <select id="p-time" name="time">
+                <option value="">Chọn thời gian</option>
+                <option>Trong tuần này</option>
+                <option>Trong tháng này</option>
+                <option>Trong học kỳ này</option>
+                <option>Trong năm học này</option>
+              </select>
+            </li>
+          </ol>
+          <div class="plan-actions">
+            <button type="button" class="btn btn-ghost" id="plan-clear">Xóa kế hoạch</button>
+            <button type="button" class="btn btn-outline" id="plan-print">In kế hoạch</button>
+            <button type="submit" class="btn btn-primary">Lưu kế hoạch</button>
+          </div>
+          <p class="form-msg ok" id="plan-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand brand-light" href="#home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M20 7l5 13-5 13-5-13z" fill="currentColor"/><path d="M20 20h5l-5 13z" fill="#F5A442"/></svg></span>
+          <span class="brand-text">Career <b>Navigator</b></span>
+        </a>
+        <p>Khám phá sở thích • Tìm hiểu nghề nghiệp • Xây dựng thương mại</p>
+      </div>
+      <nav aria-label="Liên kết cuối trang" class="footer-links">
+        <a href="#survey">Khảo sát</a>
+        <a href="#results">Kết quả</a>
+        <a href="#careers">Nghề nghiệp</a>
+        <a href="#plan">Kế hoạch</a>
+      </nav>
+      <p class="footer-note">Kết quả dựa trên mô hình sở thích nghề nghiệp RIASEC (Holland) và chỉ mang tính tham khảo. Thông tin nghề nghiệp là mô tả khái quát; hãy kiểm chứng với website chính thức của các trường và cơ quan hướng nghiệp.</p>
+    </div>
+  </footer>
+
+  <!-- 5. HỒ SƠ NGHỀ (hộp thoại) -->
+  <dialog class="career-dialog" id="career-dialog" aria-labelledby="cd-title">
+    <div class="cd-inner" id="cd-content"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
