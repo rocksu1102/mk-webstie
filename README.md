@@ -24,3 +24,4 @@ Toàn bộ câu hỏi, nhóm sở thích và danh mục nghề nằm trong `asse
 ## Chạy thử
 
 Mở `index.html` bằng trình duyệt, hoặc bật GitHub Pages cho nhánh chính (thư mục gốc).
+#MK
