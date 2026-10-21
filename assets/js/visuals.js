@@ -172,10 +172,10 @@
     var c = group.color, s = group.soft;
     var motif = MOTIFS[career.id] ? MOTIFS[career.id](c, s) : "";
     var uid = "sc" + career.id.replace(/[^a-z0-9]/g, "");
-    return '<svg viewBox="0 0 480 300" role="img" aria-label="Hình minh họa nghề ' + career.name + '" preserveAspectRatio="xMidYMid slice">' +
+    return '<svg viewBox="0 0 480 300" role="img" aria-label="Hình minh họa nghề ' + career.name + '" preserveAspectRatio="xMidYMid meet" class="scene">' +
       '<defs><linearGradient id="' + uid + '" x1="0" y1="0" x2="1" y2="1">' +
       '<stop offset="0" stop-color="' + s + '"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient></defs>' +
-      '<rect width="480" height="300" fill="url(#' + uid + ')"/>' +
+      '<rect x="-720" y="-300" width="1920" height="900" fill="url(#' + uid + ')"/>' +
       '<circle cx="400" cy="70" r="120" fill="' + c + '" opacity=".10"/>' +
       '<circle cx="70" cy="250" r="90" fill="' + c + '" opacity=".08"/>' +
       '<g fill="' + c + '" opacity=".25">' + dots() + "</g>" +

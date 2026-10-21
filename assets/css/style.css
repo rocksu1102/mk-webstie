@@ -381,7 +381,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .sc-city { font-size: 13px; color: var(--muted); margin-top: 2px; }
 .pv-note { padding: 12px 28px 20px; font-size: 13px; color: var(--muted); background: var(--bg-tint); }
 
-.cd-hero .img-slot { aspect-ratio: 2 / 1; max-height: 300px; }
+.cd-hero .img-slot { aspect-ratio: auto; height: clamp(190px, 36vw, 280px); }
+.img-slot svg.scene { overflow: visible; }
 .cd-schools { margin: 14px 28px 0; border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
 .cd-schools h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--blue); margin-bottom: 8px; }
 .cd-schools ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
@@ -397,7 +398,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .school-grid { grid-template-columns: 1fr; }
   .pv-info, .pv-schools { padding-left: 18px; padding-right: 18px; }
   .pv-note { padding: 12px 18px 18px; }
-  .cd-hero .img-slot { aspect-ratio: 16 / 8; }
+  .cd-hero .img-slot { height: 200px; }
 }
 
 /* ---------- Responsive ---------- */
