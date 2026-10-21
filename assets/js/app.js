@@ -67,7 +67,7 @@
   /* Ảnh thật của nghề: ưu tiên photoUrl (ảnh từ trang khác, kèm nguồn),
      sau đó là tệp trên Wikimedia Commons. */
   function photoOf(c) {
-    if (c.photoUrl) return { url: c.photoUrl, credit: c.photoCredit || "Nguồn ảnh", link: c.photoSource || c.photoUrl };
+    if (c.photoUrl) return { url: c.photoUrl, credit: c.photoCredit, link: c.photoSource || c.photoUrl };
     if (c.photo) {
       var f = encodeURIComponent(c.photo);
       return { url: COMMONS + "Special:FilePath/" + f + "?width=1200", credit: "Wikimedia Commons", link: COMMONS + "File:" + f };
@@ -81,7 +81,7 @@
     return '<img class="photo-bg" src="' + esc(ph.url) + '" alt="" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer">' +
       '<img class="photo" src="' + esc(ph.url) + '" alt="' + esc(alt) + '"' +
       ' loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add(\'photo-failed\');this.remove()">' +
-      '<a class="photo-credit" href="' + esc(ph.link) + '" target="_blank" rel="noopener">Ảnh: ' + esc(ph.credit) + "</a>";
+      '<a class="photo-credit" href="' + esc(ph.link) + '" target="_blank" rel="noopener">' + (ph.credit ? "Ảnh: " + esc(ph.credit) : "Nguồn ảnh") + "</a>";
   }
 
   function imageSlot(key, fallbackSvg, alt, editable, photo) {

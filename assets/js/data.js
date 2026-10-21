@@ -217,7 +217,9 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Công nghệ ô tô tại trường trung cấp, cao đẳng hoặc đại học kỹ thuật."
     },
     {
-      id: "ky-su-xay-dung", photo: "Ingenieria_civil_01.jpg", g: "R", also: ["I", "C"],
+      id: "ky-su-xay-dung", g: "R",
+      photoUrl: "assets/img/careers/ky-su-xay-dung.jpg",
+      photoSource: "https://wp-cms-media.s3.ap-east-1.amazonaws.com/ky_su_xay_dung_1_b976492aea.jpg", also: ["I", "C"],
       name: "Kỹ sư xây dựng", field: "Xây dựng",
       short: "Thiết kế, giám sát thi công nhà và công trình.",
       work: "Tính toán kết cấu, lập bản vẽ, dự toán vật liệu; giám sát công trường, đảm bảo chất lượng và an toàn thi công.",
