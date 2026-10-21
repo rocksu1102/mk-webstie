@@ -68,7 +68,10 @@
      Nếu ảnh không tải được thì tự gỡ để hiện lại hình minh họa. */
   function commonsPhoto(file, alt) {
     var f = encodeURIComponent(file);
-    return '<img class="photo" src="' + COMMONS + "Special:FilePath/" + f + '?width=1200" alt="' + esc(alt) + '"' +
+    var url = COMMONS + "Special:FilePath/" + f + "?width=1200";
+    /* Lớp nền mờ lấp đầy khung, ảnh chính hiện trọn vẹn không bị cắt */
+    return '<img class="photo-bg" src="' + url + '" alt="" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer">' +
+      '<img class="photo" src="' + url + '" alt="' + esc(alt) + '"' +
       ' loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add(\'photo-failed\');this.remove()">' +
       '<a class="photo-credit" href="' + COMMONS + "File:" + f + '" target="_blank" rel="noopener">Ảnh: Wikimedia Commons</a>';
   }
