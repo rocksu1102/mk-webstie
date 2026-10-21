@@ -62,17 +62,29 @@
   }
 
   /* Khung ảnh: hiện ảnh tự tải nếu có, nếu không thì hiện hình minh họa */
-  function imageSlot(key, fallbackSvg, alt, editable) {
+  var COMMONS = "https://commons.wikimedia.org/wiki/";
+
+  /* Ảnh thật từ Wikimedia Commons, nằm đè lên hình minh họa.
+     Nếu ảnh không tải được thì tự gỡ để hiện lại hình minh họa. */
+  function commonsPhoto(file, alt) {
+    var f = encodeURIComponent(file);
+    return '<img class="photo" src="' + COMMONS + "Special:FilePath/" + f + '?width=1200" alt="' + esc(alt) + '"' +
+      ' loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add(\'photo-failed\');this.remove()">' +
+      '<a class="photo-credit" href="' + COMMONS + "File:" + f + '" target="_blank" rel="noopener">Ảnh: Wikimedia Commons</a>';
+  }
+
+  function imageSlot(key, fallbackSvg, alt, editable, photo) {
     var src = customImage(key);
-    var inner = src ? '<img src="' + src + '" alt="' + esc(alt) + '">' : fallbackSvg;
+    var inner = src ? '<img src="' + src + '" alt="' + esc(alt) + '">' :
+      fallbackSvg + (photo ? commonsPhoto(photo, alt) : "");
     var tools = "";
     if (editable) {
       tools = '<div class="slot-tools">' +
         '<label class="slot-btn">Đổi ảnh<input type="file" accept="image/*" data-img-key="' + esc(key) + '"></label>' +
-        (src ? '<button type="button" class="slot-btn" data-img-reset="' + esc(key) + '">Dùng hình minh họa</button>' : "") +
+        (src ? '<button type="button" class="slot-btn" data-img-reset="' + esc(key) + '">' + (photo ? "Dùng ảnh mặc định" : "Dùng hình minh họa") + "</button>" : "") +
         "</div>";
     }
-    return '<figure class="img-slot' + (src ? " has-photo" : "") + '">' + inner + tools + "</figure>";
+    return '<figure class="img-slot' + (src || photo ? " has-photo" : "") + '">' + inner + tools + "</figure>";
   }
 
   /* Thu nhỏ ảnh trước khi lưu để không vượt dung lượng trình duyệt */
@@ -421,7 +433,7 @@
         }).join("") + "</div></div>" +
         '<button type="button" class="cd-close" aria-label="Đóng">×</button>' +
       "</div>" +
-      '<div class="cd-hero">' + imageSlot("career:" + c.id, V.careerScene(c, g), c.name, false) + "</div>" +
+      '<div class="cd-hero">' + imageSlot("career:" + c.id, V.careerScene(c, g), c.name, false, c.photo) + "</div>" +
       '<div class="cd-body">' +
         block("Công việc", c.work, "#3168D2") +
         block("Kiến thức – kỹ năng", c.skills, "#1F8579") +
@@ -502,7 +514,7 @@
     box.style.setProperty("--c", g.color);
     box.style.setProperty("--soft", g.soft);
     $("#pv-career").innerHTML =
-      imageSlot("career:" + c.id, V.careerScene(c, g), c.name, true) +
+      imageSlot("career:" + c.id, V.careerScene(c, g), c.name, true, c.photo) +
       '<div class="pv-info">' +
         '<p class="eyebrow">Nghề bạn chọn</p>' +
         "<h3>" + esc(c.name) + "</h3>" +

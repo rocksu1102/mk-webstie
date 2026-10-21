@@ -194,10 +194,11 @@ window.CN_DATA = {
     ]
   },
 
-  /* Danh mục nghề. Nhóm thay hoặc bổ sung bằng nghề đã nghiên cứu và kiểm chứng. */
+  /* Danh mục nghề. Nhóm thay hoặc bổ sung bằng nghề đã nghiên cứu và kiểm chứng.
+     photo: tên tệp ảnh trên Wikimedia Commons (ảnh giấy phép tự do), ví dụ "Electrician_Working.jpg". */
   careers: [
     {
-      id: "ky-thuat-vien-dien", g: "R", also: ["I"],
+      id: "ky-thuat-vien-dien", photo: "Electrician_Working.jpg", g: "R", also: ["I"],
       name: "Kỹ thuật viên điện", field: "Điện – điện tử",
       short: "Lắp đặt, kiểm tra và bảo trì hệ thống, thiết bị điện.",
       work: "Lắp đặt đường dây, thiết bị điện; đo kiểm, phát hiện và sửa chữa sự cố; bảo trì định kỳ để hệ thống vận hành an toàn.",
@@ -206,7 +207,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Điện công nghiệp, Điện dân dụng tại các trường trung cấp, cao đẳng nghề hoặc ngành Kỹ thuật điện tại đại học."
     },
     {
-      id: "ky-thuat-vien-o-to", g: "R", also: ["I"],
+      id: "ky-thuat-vien-o-to", photo: "Mechanic_repairing_car_engine.jpg", g: "R", also: ["I"],
       name: "Kỹ thuật viên ô tô", field: "Cơ khí – động lực",
       short: "Kiểm tra, bảo dưỡng và sửa chữa xe ô tô.",
       work: "Chẩn đoán lỗi động cơ, hệ thống điện và khung gầm; bảo dưỡng định kỳ; thay thế phụ tùng; sử dụng thiết bị chẩn đoán hiện đại.",
@@ -215,7 +216,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Công nghệ ô tô tại trường trung cấp, cao đẳng hoặc đại học kỹ thuật."
     },
     {
-      id: "ky-su-xay-dung", g: "R", also: ["I", "C"],
+      id: "ky-su-xay-dung", photo: "Ingenieria_civil_01.jpg", g: "R", also: ["I", "C"],
       name: "Kỹ sư xây dựng", field: "Xây dựng",
       short: "Thiết kế, giám sát thi công nhà và công trình.",
       work: "Tính toán kết cấu, lập bản vẽ, dự toán vật liệu; giám sát công trường, đảm bảo chất lượng và an toàn thi công.",
@@ -224,7 +225,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Kỹ thuật xây dựng tại các trường đại học hoặc cao đẳng xây dựng."
     },
     {
-      id: "ky-su-phan-mem", g: "I", also: ["R", "A"],
+      id: "ky-su-phan-mem", photo: "Programmer_at_work_(Unsplash).jpg", g: "I", also: ["R", "A"],
       name: "Kỹ sư phần mềm", field: "Công nghệ thông tin",
       short: "Xây dựng và kiểm thử ứng dụng, phần mềm.",
       work: "Thiết kế, xây dựng và kiểm thử phần mềm; tìm và sửa lỗi; phối hợp với nhóm để phát triển sản phẩm theo nhu cầu người dùng.",
@@ -233,7 +234,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Kỹ thuật phần mềm, Công nghệ thông tin tại trường cao đẳng hoặc đại học."
     },
     {
-      id: "ky-thuat-vien-phong-thi-nghiem", g: "I", also: ["R", "C"],
+      id: "ky-thuat-vien-phong-thi-nghiem", photo: "Close-up_of_a_lab_technitian_applying_a_sample_to_a_microscope_glass_slide_with_a_pipette.jpg", g: "I", also: ["R", "C"],
       name: "Kỹ thuật viên phòng thí nghiệm", field: "Khoa học ứng dụng",
       short: "Hỗ trợ thí nghiệm, phân tích mẫu và ghi dữ liệu.",
       work: "Chuẩn bị dụng cụ, hóa chất; thực hiện xét nghiệm, phân tích mẫu theo quy trình; ghi chép và báo cáo kết quả chính xác.",
@@ -242,7 +243,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Kỹ thuật xét nghiệm, Công nghệ sinh học, Công nghệ kỹ thuật hóa học tại cao đẳng hoặc đại học."
     },
     {
-      id: "chuyen-vien-phan-tich-du-lieu", g: "I", also: ["C"],
+      id: "chuyen-vien-phan-tich-du-lieu", photo: "Statistics_on_a_laptop_(Unsplash).jpg", g: "I", also: ["C"],
       name: "Chuyên viên phân tích dữ liệu", field: "Khoa học dữ liệu",
       short: "Thu thập và phân tích số liệu để hỗ trợ ra quyết định.",
       work: "Thu thập, làm sạch và phân tích dữ liệu; tạo biểu đồ, báo cáo; tìm ra xu hướng giúp tổ chức đưa ra quyết định tốt hơn.",
@@ -251,7 +252,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Khoa học dữ liệu, Hệ thống thông tin, Thống kê tại các trường đại học."
     },
     {
-      id: "thiet-ke-do-hoa", g: "A", also: ["E"],
+      id: "thiet-ke-do-hoa", photo: "Pantural_graphic_designer.jpg", g: "A", also: ["E"],
       name: "Nhà thiết kế đồ họa", field: "Thiết kế – mỹ thuật",
       short: "Tạo hình ảnh và nội dung số cho sản phẩm, thương hiệu.",
       work: "Thiết kế logo, poster, giao diện, ấn phẩm truyền thông; làm việc với khách hàng để hiểu ý tưởng và chỉnh sửa sản phẩm.",
@@ -260,7 +261,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Thiết kế đồ họa, Thiết kế đa phương tiện tại trường cao đẳng hoặc đại học mỹ thuật, công nghệ."
     },
     {
-      id: "kien-truc-su", g: "A", also: ["R", "I"],
+      id: "kien-truc-su", photo: "Architecture_Studio,_Northeastern_University.jpg", g: "A", also: ["R", "I"],
       name: "Kiến trúc sư", field: "Kiến trúc",
       short: "Thiết kế không gian sống, nhà ở và công trình.",
       work: "Lên ý tưởng, vẽ phác thảo và bản vẽ kiến trúc; dựng mô hình 3D; phối hợp với kỹ sư để hiện thực hóa công trình.",
@@ -269,7 +270,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Kiến trúc tại các trường đại học kiến trúc hoặc xây dựng (thường có thi năng khiếu vẽ)."
     },
     {
-      id: "sang-tao-noi-dung-so", g: "A", also: ["E", "S"],
+      id: "sang-tao-noi-dung-so", photo: "Youtuber.jpg", g: "A", also: ["E", "S"],
       name: "Nhà sáng tạo nội dung số", field: "Truyền thông đa phương tiện",
       short: "Viết, quay và dựng nội dung cho các nền tảng số.",
       work: "Lên ý tưởng, viết kịch bản, quay và dựng video, viết bài; theo dõi phản hồi của người xem để cải thiện nội dung.",
@@ -278,7 +279,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Truyền thông đa phương tiện, Báo chí, Quan hệ công chúng tại cao đẳng hoặc đại học."
     },
     {
-      id: "giao-vien", g: "S", also: ["A", "E"],
+      id: "giao-vien", photo: "Students_are_learning_in_the_classroom.jpg", g: "S", also: ["A", "E"],
       name: "Giáo viên", field: "Giáo dục",
       short: "Hỗ trợ học sinh học tập và phát triển.",
       work: "Soạn bài, giảng dạy, tổ chức hoạt động học tập; đánh giá sự tiến bộ và đồng hành cùng học sinh, phụ huynh.",
@@ -287,7 +288,7 @@ window.CN_DATA = {
       study: "Tìm hiểu các ngành Sư phạm tại trường đại học hoặc cao đẳng sư phạm."
     },
     {
-      id: "dieu-duong", g: "S", also: ["I", "C"],
+      id: "dieu-duong", photo: "Nurse_attending_to_a_patient.jpg", g: "S", also: ["I", "C"],
       name: "Điều dưỡng", field: "Y tế – chăm sóc sức khỏe",
       short: "Chăm sóc, theo dõi và hỗ trợ người bệnh.",
       work: "Theo dõi sức khỏe người bệnh, thực hiện chăm sóc theo chỉ định; hỗ trợ bác sĩ; hướng dẫn người bệnh và gia đình.",
@@ -296,7 +297,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Điều dưỡng tại trường cao đẳng hoặc đại học y – dược."
     },
     {
-      id: "tu-van-tam-ly", g: "S", also: ["I"],
+      id: "tu-van-tam-ly", photo: "Counselling_session.jpg", g: "S", also: ["I"],
       name: "Chuyên viên tư vấn tâm lý", field: "Tâm lý học",
       short: "Lắng nghe, hỗ trợ mọi người vượt qua khó khăn.",
       work: "Trò chuyện, lắng nghe và hỗ trợ người cần giúp đỡ; tổ chức hoạt động kỹ năng sống; phối hợp với gia đình, nhà trường.",
@@ -305,7 +306,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Tâm lý học, Tâm lý học giáo dục, Công tác xã hội tại các trường đại học."
     },
     {
-      id: "chuyen-vien-marketing", g: "E", also: ["A", "S"],
+      id: "chuyen-vien-marketing", photo: "Brainstorming.jpg", g: "E", also: ["A", "S"],
       name: "Chuyên viên marketing", field: "Marketing – truyền thông",
       short: "Tìm hiểu nhu cầu khách hàng và truyền thông sản phẩm.",
       work: "Nghiên cứu thị trường, lên kế hoạch quảng bá; tổ chức chiến dịch trên mạng xã hội, sự kiện; đo lường hiệu quả.",
@@ -314,7 +315,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Marketing, Quản trị kinh doanh tại cao đẳng hoặc đại học kinh tế."
     },
     {
-      id: "to-chuc-su-kien", g: "E", also: ["S", "C"],
+      id: "to-chuc-su-kien", photo: "Focusing_stage_lights.jpg", g: "E", also: ["S", "C"],
       name: "Chuyên viên tổ chức sự kiện", field: "Quản trị dịch vụ",
       short: "Lên kế hoạch và điều phối các sự kiện.",
       work: "Lên ý tưởng chương trình, lập kế hoạch và ngân sách; làm việc với đối tác; điều phối đội ngũ trong ngày diễn ra sự kiện.",
@@ -323,7 +324,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Quản trị sự kiện, Quản trị dịch vụ du lịch và lữ hành tại cao đẳng hoặc đại học."
     },
     {
-      id: "nha-quan-ly-kinh-doanh", g: "E", also: ["C"],
+      id: "nha-quan-ly-kinh-doanh", photo: "Business_man_and_woman_handshake_in_work_office.jpg", g: "E", also: ["C"],
       name: "Chuyên viên kinh doanh", field: "Quản trị kinh doanh",
       short: "Tìm kiếm khách hàng và phát triển doanh số.",
       work: "Tìm hiểu nhu cầu khách hàng, giới thiệu sản phẩm, đàm phán; chăm sóc khách hàng và báo cáo kết quả kinh doanh.",
@@ -332,7 +333,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Quản trị kinh doanh, Kinh doanh thương mại tại cao đẳng hoặc đại học."
     },
     {
-      id: "ke-toan", g: "C", also: ["I"],
+      id: "ke-toan", photo: "Calculator_Office.jpg", g: "C", also: ["I"],
       name: "Kế toán", field: "Kế toán – kiểm toán",
       short: "Ghi chép, theo dõi thu chi và lập báo cáo tài chính.",
       work: "Ghi chép chứng từ, theo dõi thu chi; lập báo cáo tài chính, báo cáo thuế; kiểm tra số liệu chính xác theo quy định.",
@@ -341,7 +342,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Kế toán, Kiểm toán tại trường trung cấp, cao đẳng hoặc đại học kinh tế."
     },
     {
-      id: "hanh-chinh-van-phong", g: "C", also: ["S"],
+      id: "hanh-chinh-van-phong", photo: "Secretary_at_work.jpg", g: "C", also: ["S"],
       name: "Nhân viên hành chính – văn phòng", field: "Hành chính – văn phòng",
       short: "Quản lý hồ sơ, giấy tờ và hỗ trợ vận hành tổ chức.",
       work: "Soạn thảo, lưu trữ văn bản; sắp xếp lịch làm việc; quản lý hồ sơ, tài sản văn phòng; hỗ trợ các phòng ban.",
@@ -350,7 +351,7 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Quản trị văn phòng, Văn thư – lưu trữ tại trung cấp, cao đẳng hoặc đại học."
     },
     {
-      id: "chuyen-vien-logistics", g: "C", also: ["E"],
+      id: "chuyen-vien-logistics", photo: "Container_loading_with_forklift_at_warehouse_in_Thailand.jpg", g: "C", also: ["E"],
       name: "Chuyên viên logistics", field: "Logistics – chuỗi cung ứng",
       short: "Điều phối vận chuyển, kho bãi và hàng hóa.",
       work: "Lên kế hoạch vận chuyển, theo dõi đơn hàng, quản lý kho; xử lý chứng từ xuất nhập khẩu; phối hợp với đối tác.",
