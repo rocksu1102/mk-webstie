@@ -234,7 +234,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Kỹ thuật xây dựng tại các trường đại học hoặc cao đẳng xây dựng."
     },
     {
-      id: "ky-su-phan-mem", photo: "Programmer_at_work_(Unsplash).jpg", g: "I", also: ["R", "A"],
+      id: "ky-su-phan-mem", g: "I",
+      photoUrl: "https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/04/ky-su-phan-mem-la-gi.jpg",
+      photoCredit: "VietnamWorks",
+      photoSource: "https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/04/ky-su-phan-mem-la-gi.jpg", also: ["R", "A"],
       name: "Kỹ sư phần mềm", field: "Công nghệ thông tin",
       short: "Xây dựng và kiểm thử ứng dụng, phần mềm.",
       work: "Thiết kế, xây dựng và kiểm thử phần mềm; tìm và sửa lỗi; phối hợp với nhóm để phát triển sản phẩm theo nhu cầu người dùng.",
@@ -243,7 +246,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Kỹ thuật phần mềm, Công nghệ thông tin tại trường cao đẳng hoặc đại học."
     },
     {
-      id: "ky-thuat-vien-phong-thi-nghiem", photo: "Close-up_of_a_lab_technitian_applying_a_sample_to_a_microscope_glass_slide_with_a_pipette.jpg", g: "I", also: ["R", "C"],
+      id: "ky-thuat-vien-phong-thi-nghiem", g: "I",
+      photoUrl: "https://ohstem.vn/wp-content/uploads/legacy/2022/09/1-nhan-vien-phong-lab-la-gi-nghe-nghiep-trien-vong-trong-tuong-lai.jpg",
+      photoCredit: "OhStem",
+      photoSource: "https://ohstem.vn/wp-content/uploads/legacy/2022/09/1-nhan-vien-phong-lab-la-gi-nghe-nghiep-trien-vong-trong-tuong-lai.jpg", also: ["R", "C"],
       name: "Kỹ thuật viên phòng thí nghiệm", field: "Khoa học ứng dụng",
       short: "Hỗ trợ thí nghiệm, phân tích mẫu và ghi dữ liệu.",
       work: "Chuẩn bị dụng cụ, hóa chất; thực hiện xét nghiệm, phân tích mẫu theo quy trình; ghi chép và báo cáo kết quả chính xác.",
@@ -252,7 +258,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Kỹ thuật xét nghiệm, Công nghệ sinh học, Công nghệ kỹ thuật hóa học tại cao đẳng hoặc đại học."
     },
     {
-      id: "chuyen-vien-phan-tich-du-lieu", photo: "Statistics_on_a_laptop_(Unsplash).jpg", g: "I", also: ["C"],
+      id: "chuyen-vien-phan-tich-du-lieu", g: "I",
+      photoUrl: "https://som.edu.vn/wp-content/uploads/2023/04/tuong-lai-cua-nganh-phan-tich-du-lieu-o-viet-nam-1024x683.jpg",
+      photoCredit: "som.edu.vn",
+      photoSource: "https://som.edu.vn/wp-content/uploads/2023/04/tuong-lai-cua-nganh-phan-tich-du-lieu-o-viet-nam-1024x683.jpg", also: ["C"],
       name: "Chuyên viên phân tích dữ liệu", field: "Khoa học dữ liệu",
       short: "Thu thập và phân tích số liệu để hỗ trợ ra quyết định.",
       work: "Thu thập, làm sạch và phân tích dữ liệu; tạo biểu đồ, báo cáo; tìm ra xu hướng giúp tổ chức đưa ra quyết định tốt hơn.",
@@ -274,7 +283,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Thiết kế đồ họa, Thiết kế đa phương tiện tại trường cao đẳng hoặc đại học mỹ thuật, công nghệ."
     },
     {
-      id: "kien-truc-su", photo: "Architecture_Studio,_Northeastern_University.jpg", g: "A", also: ["R", "I"],
+      id: "kien-truc-su", g: "A",
+      photoUrl: "https://sgl.com.vn/wp-content/uploads/2024/10/kien-truc-su-la-gi.jpg",
+      photoCredit: "sgl.com.vn",
+      photoSource: "https://sgl.com.vn/wp-content/uploads/2024/10/kien-truc-su-la-gi.jpg", also: ["R", "I"],
       name: "Kiến trúc sư", field: "Kiến trúc",
       short: "Thiết kế không gian sống, nhà ở và công trình.",
       work: "Lên ý tưởng, vẽ phác thảo và bản vẽ kiến trúc; dựng mô hình 3D; phối hợp với kỹ sư để hiện thực hóa công trình.",
@@ -283,7 +295,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Kiến trúc tại các trường đại học kiến trúc hoặc xây dựng (thường có thi năng khiếu vẽ)."
     },
     {
-      id: "sang-tao-noi-dung-so", photo: "Youtuber.jpg", g: "A", also: ["E", "S"],
+      id: "sang-tao-noi-dung-so", g: "A",
+      photoUrl: "https://cdn-media.sforum.vn/storage/app/media/ctv_seo8/Ng%C6%B0%E1%BB%9Di%20s%C3%A1ng%20t%E1%BA%A1o%20n%E1%BB%99i%20dung%20s%E1%BB%91%20tr%C3%AAn%20facebook/nguoi-sang-tao-noi-dung-so-tren-facebook-1.jpg",
+      photoCredit: "Sforum",
+      photoSource: "https://cdn-media.sforum.vn/storage/app/media/ctv_seo8/Ng%C6%B0%E1%BB%9Di%20s%C3%A1ng%20t%E1%BA%A1o%20n%E1%BB%99i%20dung%20s%E1%BB%91%20tr%C3%AAn%20facebook/nguoi-sang-tao-noi-dung-so-tren-facebook-1.jpg", also: ["E", "S"],
       name: "Nhà sáng tạo nội dung số", field: "Truyền thông đa phương tiện",
       short: "Viết, quay và dựng nội dung cho các nền tảng số.",
       work: "Lên ý tưởng, viết kịch bản, quay và dựng video, viết bài; theo dõi phản hồi của người xem để cải thiện nội dung.",
@@ -292,7 +307,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Truyền thông đa phương tiện, Báo chí, Quan hệ công chúng tại cao đẳng hoặc đại học."
     },
     {
-      id: "giao-vien", photo: "Students_are_learning_in_the_classroom.jpg", g: "S", also: ["A", "E"],
+      id: "giao-vien", g: "S",
+      photoUrl: "https://media.tapchigiaoduc.edu.vn/uploads/2025/10/15/picture1-1760520106.png",
+      photoCredit: "Tạp chí Giáo dục",
+      photoSource: "https://media.tapchigiaoduc.edu.vn/uploads/2025/10/15/picture1-1760520106.png", also: ["A", "E"],
       name: "Giáo viên", field: "Giáo dục",
       short: "Hỗ trợ học sinh học tập và phát triển.",
       work: "Soạn bài, giảng dạy, tổ chức hoạt động học tập; đánh giá sự tiến bộ và đồng hành cùng học sinh, phụ huynh.",
@@ -301,7 +319,10 @@ window.CN_DATA = {
       study: "Tìm hiểu các ngành Sư phạm tại trường đại học hoặc cao đẳng sư phạm."
     },
     {
-      id: "dieu-duong", photo: "Nurse_attending_to_a_patient.jpg", g: "S", also: ["I", "C"],
+      id: "dieu-duong", g: "S",
+      photoUrl: "https://ttu.edu.vn/wp-content/uploads/2025/04/nganh-dieu-duong.png",
+      photoCredit: "ttu.edu.vn",
+      photoSource: "https://ttu.edu.vn/wp-content/uploads/2025/04/nganh-dieu-duong.png", also: ["I", "C"],
       name: "Điều dưỡng", field: "Y tế – chăm sóc sức khỏe",
       short: "Chăm sóc, theo dõi và hỗ trợ người bệnh.",
       work: "Theo dõi sức khỏe người bệnh, thực hiện chăm sóc theo chỉ định; hỗ trợ bác sĩ; hướng dẫn người bệnh và gia đình.",
@@ -310,7 +331,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Điều dưỡng tại trường cao đẳng hoặc đại học y – dược."
     },
     {
-      id: "tu-van-tam-ly", photo: "Counselling_session.jpg", g: "S", also: ["I"],
+      id: "tu-van-tam-ly", g: "S",
+      photoUrl: "https://huongnghiep40.vn/wp-content/uploads/2020/05/huong-nghiep-40-chuyen-gia-tu-van-tam-ly-1.jpg",
+      photoCredit: "huongnghiep40.vn",
+      photoSource: "https://huongnghiep40.vn/wp-content/uploads/2020/05/huong-nghiep-40-chuyen-gia-tu-van-tam-ly-1.jpg", also: ["I"],
       name: "Chuyên viên tư vấn tâm lý", field: "Tâm lý học",
       short: "Lắng nghe, hỗ trợ mọi người vượt qua khó khăn.",
       work: "Trò chuyện, lắng nghe và hỗ trợ người cần giúp đỡ; tổ chức hoạt động kỹ năng sống; phối hợp với gia đình, nhà trường.",
@@ -319,7 +343,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Tâm lý học, Tâm lý học giáo dục, Công tác xã hội tại các trường đại học."
     },
     {
-      id: "chuyen-vien-marketing", photo: "Brainstorming.jpg", g: "E", also: ["A", "S"],
+      id: "chuyen-vien-marketing", g: "E",
+      photoUrl: "https://talentbold.com/Upload/news/20200605/173329215_To-chat-cua-mot-chuyen-vien-Marketing-4.jpg",
+      photoCredit: "TalentBold",
+      photoSource: "https://talentbold.com/Upload/news/20200605/173329215_To-chat-cua-mot-chuyen-vien-Marketing-4.jpg", also: ["A", "S"],
       name: "Chuyên viên marketing", field: "Marketing – truyền thông",
       short: "Tìm hiểu nhu cầu khách hàng và truyền thông sản phẩm.",
       work: "Nghiên cứu thị trường, lên kế hoạch quảng bá; tổ chức chiến dịch trên mạng xã hội, sự kiện; đo lường hiệu quả.",
@@ -328,7 +355,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Marketing, Quản trị kinh doanh tại cao đẳng hoặc đại học kinh tế."
     },
     {
-      id: "to-chuc-su-kien", photo: "Focusing_stage_lights.jpg", g: "E", also: ["S", "C"],
+      id: "to-chuc-su-kien", g: "E",
+      photoUrl: "https://dulichsaigon.edu.vn/wp-content/uploads/2024/05/chan-dung-to-chuc-su-kien-va-quy-trinh-to-chuc-su-kien.jpg",
+      photoCredit: "dulichsaigon.edu.vn",
+      photoSource: "https://dulichsaigon.edu.vn/wp-content/uploads/2024/05/chan-dung-to-chuc-su-kien-va-quy-trinh-to-chuc-su-kien.jpg", also: ["S", "C"],
       name: "Chuyên viên tổ chức sự kiện", field: "Quản trị dịch vụ",
       short: "Lên kế hoạch và điều phối các sự kiện.",
       work: "Lên ý tưởng chương trình, lập kế hoạch và ngân sách; làm việc với đối tác; điều phối đội ngũ trong ngày diễn ra sự kiện.",
@@ -337,7 +367,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Quản trị sự kiện, Quản trị dịch vụ du lịch và lữ hành tại cao đẳng hoặc đại học."
     },
     {
-      id: "nha-quan-ly-kinh-doanh", photo: "Business_man_and_woman_handshake_in_work_office.jpg", g: "E", also: ["C"],
+      id: "nha-quan-ly-kinh-doanh", g: "E",
+      photoUrl: "https://hrchannels.com/uptalent/attachments/images/20200619/1592541485459-chuyen-vien-kinh-doanh-1.jpg",
+      photoCredit: "HR Channels",
+      photoSource: "https://hrchannels.com/uptalent/attachments/images/20200619/1592541485459-chuyen-vien-kinh-doanh-1.jpg", also: ["C"],
       name: "Chuyên viên kinh doanh", field: "Quản trị kinh doanh",
       short: "Tìm kiếm khách hàng và phát triển doanh số.",
       work: "Tìm hiểu nhu cầu khách hàng, giới thiệu sản phẩm, đàm phán; chăm sóc khách hàng và báo cáo kết quả kinh doanh.",
@@ -346,7 +379,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Quản trị kinh doanh, Kinh doanh thương mại tại cao đẳng hoặc đại học."
     },
     {
-      id: "ke-toan", photo: "Calculator_Office.jpg", g: "C", also: ["I"],
+      id: "ke-toan", g: "C",
+      photoUrl: "https://safebooks.vn/wp-content/uploads/2024/07/ke-toan-noi-bo-2-1024x683.jpg",
+      photoCredit: "SafeBooks",
+      photoSource: "https://safebooks.vn/wp-content/uploads/2024/07/ke-toan-noi-bo-2-1024x683.jpg", also: ["I"],
       name: "Kế toán", field: "Kế toán – kiểm toán",
       short: "Ghi chép, theo dõi thu chi và lập báo cáo tài chính.",
       work: "Ghi chép chứng từ, theo dõi thu chi; lập báo cáo tài chính, báo cáo thuế; kiểm tra số liệu chính xác theo quy định.",
@@ -355,7 +391,9 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Kế toán, Kiểm toán tại trường trung cấp, cao đẳng hoặc đại học kinh tế."
     },
     {
-      id: "hanh-chinh-van-phong", photo: "Secretary_at_work.jpg", g: "C", also: ["S"],
+      id: "hanh-chinh-van-phong", g: "C",
+      photoUrl: "https://lh4.googleusercontent.com/BSnZ0Ady4_tjCtDCY4P8Q9Hdzsj1tHJ8cBZwEGuYr0TD2nhu4ALO22QMe_5zhYhgAAS6CaqWSULxtchE8bt_TURfR7kqrr3c38Z8esUU9MvZ1cCo6zrAFbGuI5hTj2kObl9wwA_-",
+      photoSource: "https://lh4.googleusercontent.com/BSnZ0Ady4_tjCtDCY4P8Q9Hdzsj1tHJ8cBZwEGuYr0TD2nhu4ALO22QMe_5zhYhgAAS6CaqWSULxtchE8bt_TURfR7kqrr3c38Z8esUU9MvZ1cCo6zrAFbGuI5hTj2kObl9wwA_-", also: ["S"],
       name: "Nhân viên hành chính – văn phòng", field: "Hành chính – văn phòng",
       short: "Quản lý hồ sơ, giấy tờ và hỗ trợ vận hành tổ chức.",
       work: "Soạn thảo, lưu trữ văn bản; sắp xếp lịch làm việc; quản lý hồ sơ, tài sản văn phòng; hỗ trợ các phòng ban.",
@@ -364,7 +402,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Quản trị văn phòng, Văn thư – lưu trữ tại trung cấp, cao đẳng hoặc đại học."
     },
     {
-      id: "chuyen-vien-logistics", photo: "Container_loading_with_forklift_at_warehouse_in_Thailand.jpg", g: "C", also: ["E"],
+      id: "chuyen-vien-logistics", g: "C",
+      photoUrl: "https://static.topcv.vn/cms/nhan-vien-hien-truong-logistics-topcv-1671f106d0e0bd.jpg",
+      photoCredit: "TopCV",
+      photoSource: "https://static.topcv.vn/cms/nhan-vien-hien-truong-logistics-topcv-1671f106d0e0bd.jpg", also: ["E"],
       name: "Chuyên viên logistics", field: "Logistics – chuỗi cung ứng",
       short: "Điều phối vận chuyển, kho bãi và hàng hóa.",
       work: "Lên kế hoạch vận chuyển, theo dõi đơn hàng, quản lý kho; xử lý chứng từ xuất nhập khẩu; phối hợp với đối tác.",
