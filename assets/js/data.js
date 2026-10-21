@@ -199,7 +199,10 @@ window.CN_DATA = {
      Hoặc photoUrl (link ảnh) + photoCredit (tên nguồn) + photoSource (link bài gốc) cho ảnh từ trang khác. */
   careers: [
     {
-      id: "ky-thuat-vien-dien", photo: "Electrician_Working.jpg", g: "R", also: ["I"],
+      id: "ky-thuat-vien-dien", g: "R",
+      photoUrl: "https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/04/ky-thuat-dien-la-gi-1.jpg",
+      photoCredit: "VietnamWorks",
+      photoSource: "https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/04/ky-thuat-dien-la-gi-1.jpg", also: ["I"],
       name: "Kỹ thuật viên điện", field: "Điện – điện tử",
       short: "Lắp đặt, kiểm tra và bảo trì hệ thống, thiết bị điện.",
       work: "Lắp đặt đường dây, thiết bị điện; đo kiểm, phát hiện và sửa chữa sự cố; bảo trì định kỳ để hệ thống vận hành an toàn.",
@@ -208,7 +211,10 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Điện công nghiệp, Điện dân dụng tại các trường trung cấp, cao đẳng nghề hoặc ngành Kỹ thuật điện tại đại học."
     },
     {
-      id: "ky-thuat-vien-o-to", photo: "Mechanic_repairing_car_engine.jpg", g: "R", also: ["I"],
+      id: "ky-thuat-vien-o-to", g: "R",
+      photoUrl: "https://oto.edu.vn/wp-content/uploads/2019/10/theo-duoi-nghe-sua-o-to-2.jpg",
+      photoCredit: "oto.edu.vn",
+      photoSource: "https://oto.edu.vn/wp-content/uploads/2019/10/theo-duoi-nghe-sua-o-to-2.jpg", also: ["I"],
       name: "Kỹ thuật viên ô tô", field: "Cơ khí – động lực",
       short: "Kiểm tra, bảo dưỡng và sửa chữa xe ô tô.",
       work: "Chẩn đoán lỗi động cơ, hệ thống điện và khung gầm; bảo dưỡng định kỳ; thay thế phụ tùng; sử dụng thiết bị chẩn đoán hiện đại.",
