@@ -99,6 +99,101 @@ window.CN_DATA = {
     { v: 5, label: "Rất thích" }
   ],
 
+  /* Ví dụ trường có đào tạo ngành liên quan (tham khảo). Học sinh cần kiểm tra
+     ngành và phương thức tuyển sinh từng năm trên website chính thức của trường. */
+  schools: {
+    "ky-thuat-vien-dien": [
+      { name: "Trường Đại học Điện lực", short: "EPU", city: "Hà Nội", major: "Kỹ thuật điện" },
+      { name: "Trường Đại học Bách khoa Hà Nội", short: "HUST", city: "Hà Nội", major: "Kỹ thuật điện" },
+      { name: "Trường Cao đẳng Kỹ thuật Cao Thắng", short: "CAO THẮNG", city: "TP.HCM", major: "Điện công nghiệp" }
+    ],
+    "ky-thuat-vien-o-to": [
+      { name: "Trường Đại học Công nghiệp Hà Nội", short: "HaUI", city: "Hà Nội", major: "Công nghệ kỹ thuật ô tô" },
+      { name: "Trường Đại học Sư phạm Kỹ thuật TP.HCM", short: "HCMUTE", city: "TP.HCM", major: "Công nghệ kỹ thuật ô tô" },
+      { name: "Trường Cao đẳng Kỹ thuật Cao Thắng", short: "CAO THẮNG", city: "TP.HCM", major: "Công nghệ ô tô" }
+    ],
+    "ky-su-xay-dung": [
+      { name: "Trường Đại học Xây dựng Hà Nội", short: "HUCE", city: "Hà Nội", major: "Kỹ thuật xây dựng" },
+      { name: "Trường Đại học Bách khoa – ĐHQG TP.HCM", short: "HCMUT", city: "TP.HCM", major: "Kỹ thuật xây dựng" },
+      { name: "Trường Đại học Giao thông Vận tải", short: "UTC", city: "Hà Nội", major: "Kỹ thuật xây dựng" }
+    ],
+    "ky-su-phan-mem": [
+      { name: "Trường Đại học Bách khoa Hà Nội", short: "HUST", city: "Hà Nội", major: "Khoa học máy tính, Kỹ thuật phần mềm" },
+      { name: "Trường Đại học Công nghệ – ĐHQG Hà Nội", short: "UET", city: "Hà Nội", major: "Công nghệ thông tin" },
+      { name: "Trường Đại học Công nghệ Thông tin – ĐHQG TP.HCM", short: "UIT", city: "TP.HCM", major: "Kỹ thuật phần mềm" }
+    ],
+    "ky-thuat-vien-phong-thi-nghiem": [
+      { name: "Trường Đại học Y Hà Nội", short: "HMU", city: "Hà Nội", major: "Kỹ thuật xét nghiệm y học" },
+      { name: "Trường Đại học Khoa học Tự nhiên – ĐHQG Hà Nội", short: "HUS", city: "Hà Nội", major: "Công nghệ sinh học, Hóa học" },
+      { name: "Đại học Y Dược TP.HCM", short: "UMP", city: "TP.HCM", major: "Kỹ thuật xét nghiệm y học" }
+    ],
+    "chuyen-vien-phan-tich-du-lieu": [
+      { name: "Đại học Kinh tế Quốc dân", short: "NEU", city: "Hà Nội", major: "Khoa học dữ liệu, Thống kê" },
+      { name: "Trường Đại học Bách khoa Hà Nội", short: "HUST", city: "Hà Nội", major: "Khoa học dữ liệu" },
+      { name: "Trường Đại học Khoa học Tự nhiên – ĐHQG TP.HCM", short: "HCMUS", city: "TP.HCM", major: "Khoa học dữ liệu" }
+    ],
+    "thiet-ke-do-hoa": [
+      { name: "Trường Đại học Mỹ thuật Công nghiệp", short: "MTCN", city: "Hà Nội", major: "Thiết kế đồ họa" },
+      { name: "Trường Đại học Kiến trúc TP.HCM", short: "UAH", city: "TP.HCM", major: "Thiết kế đồ họa" },
+      { name: "Cao đẳng FPT Polytechnic", short: "FPT", city: "Nhiều tỉnh, thành", major: "Thiết kế đồ họa" }
+    ],
+    "kien-truc-su": [
+      { name: "Trường Đại học Kiến trúc Hà Nội", short: "HAU", city: "Hà Nội", major: "Kiến trúc" },
+      { name: "Trường Đại học Kiến trúc TP.HCM", short: "UAH", city: "TP.HCM", major: "Kiến trúc" },
+      { name: "Trường Đại học Xây dựng Hà Nội", short: "HUCE", city: "Hà Nội", major: "Kiến trúc" }
+    ],
+    "sang-tao-noi-dung-so": [
+      { name: "Học viện Báo chí và Tuyên truyền", short: "AJC", city: "Hà Nội", major: "Báo chí, Truyền thông đa phương tiện" },
+      { name: "Học viện Công nghệ Bưu chính Viễn thông", short: "PTIT", city: "Hà Nội, TP.HCM", major: "Truyền thông đa phương tiện" },
+      { name: "Trường ĐH Khoa học Xã hội và Nhân văn – ĐHQG TP.HCM", short: "USSH", city: "TP.HCM", major: "Báo chí, Truyền thông" }
+    ],
+    "giao-vien": [
+      { name: "Trường Đại học Sư phạm Hà Nội", short: "HNUE", city: "Hà Nội", major: "Các ngành Sư phạm" },
+      { name: "Trường Đại học Sư phạm TP.HCM", short: "HCMUE", city: "TP.HCM", major: "Các ngành Sư phạm" },
+      { name: "Trường Đại học Sư phạm – ĐH Đà Nẵng", short: "UED", city: "Đà Nẵng", major: "Các ngành Sư phạm" }
+    ],
+    "dieu-duong": [
+      { name: "Trường Đại học Y Hà Nội", short: "HMU", city: "Hà Nội", major: "Điều dưỡng" },
+      { name: "Trường Đại học Điều dưỡng Nam Định", short: "NDUN", city: "Nam Định", major: "Điều dưỡng" },
+      { name: "Đại học Y Dược TP.HCM", short: "UMP", city: "TP.HCM", major: "Điều dưỡng" }
+    ],
+    "tu-van-tam-ly": [
+      { name: "Trường ĐH Khoa học Xã hội và Nhân văn – ĐHQG Hà Nội", short: "USSH", city: "Hà Nội", major: "Tâm lý học, Công tác xã hội" },
+      { name: "Trường Đại học Sư phạm Hà Nội", short: "HNUE", city: "Hà Nội", major: "Tâm lý học giáo dục" },
+      { name: "Trường Đại học Sư phạm TP.HCM", short: "HCMUE", city: "TP.HCM", major: "Tâm lý học" }
+    ],
+    "chuyen-vien-marketing": [
+      { name: "Đại học Kinh tế Quốc dân", short: "NEU", city: "Hà Nội", major: "Marketing" },
+      { name: "Trường Đại học Thương mại", short: "TMU", city: "Hà Nội", major: "Marketing" },
+      { name: "Đại học Kinh tế TP.HCM", short: "UEH", city: "TP.HCM", major: "Marketing" }
+    ],
+    "to-chuc-su-kien": [
+      { name: "Trường Đại học Văn hóa Hà Nội", short: "HUC", city: "Hà Nội", major: "Quản lý văn hóa, Du lịch" },
+      { name: "Trường Đại học Thương mại", short: "TMU", city: "Hà Nội", major: "Quản trị dịch vụ du lịch và lữ hành" },
+      { name: "Trường Đại học Văn hóa TP.HCM", short: "HCMUC", city: "TP.HCM", major: "Quản lý văn hóa" }
+    ],
+    "nha-quan-ly-kinh-doanh": [
+      { name: "Trường Đại học Ngoại thương", short: "FTU", city: "Hà Nội, TP.HCM", major: "Quản trị kinh doanh, Kinh doanh quốc tế" },
+      { name: "Đại học Kinh tế Quốc dân", short: "NEU", city: "Hà Nội", major: "Quản trị kinh doanh" },
+      { name: "Đại học Kinh tế TP.HCM", short: "UEH", city: "TP.HCM", major: "Quản trị kinh doanh" }
+    ],
+    "ke-toan": [
+      { name: "Học viện Tài chính", short: "AOF", city: "Hà Nội", major: "Kế toán, Kiểm toán" },
+      { name: "Đại học Kinh tế Quốc dân", short: "NEU", city: "Hà Nội", major: "Kế toán" },
+      { name: "Đại học Kinh tế TP.HCM", short: "UEH", city: "TP.HCM", major: "Kế toán" }
+    ],
+    "hanh-chinh-van-phong": [
+      { name: "Học viện Hành chính và Quản trị công", short: "NAPA", city: "Hà Nội", major: "Quản trị văn phòng" },
+      { name: "Trường ĐH Khoa học Xã hội và Nhân văn – ĐHQG Hà Nội", short: "USSH", city: "Hà Nội", major: "Lưu trữ học, Quản trị văn phòng" },
+      { name: "Trường ĐH Khoa học Xã hội và Nhân văn – ĐHQG TP.HCM", short: "USSH", city: "TP.HCM", major: "Lưu trữ học" }
+    ],
+    "chuyen-vien-logistics": [
+      { name: "Trường Đại học Giao thông Vận tải", short: "UTC", city: "Hà Nội", major: "Logistics và quản lý chuỗi cung ứng" },
+      { name: "Trường Đại học Ngoại thương", short: "FTU", city: "Hà Nội, TP.HCM", major: "Logistics và quản lý chuỗi cung ứng" },
+      { name: "Trường Đại học Hàng hải Việt Nam", short: "VMU", city: "Hải Phòng", major: "Logistics" }
+    ]
+  },
+
   /* Danh mục nghề. Nhóm thay hoặc bổ sung bằng nghề đã nghiên cứu và kiểm chứng. */
   careers: [
     {

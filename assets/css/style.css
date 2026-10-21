@@ -347,6 +347,59 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
+/* ---------- Hình ảnh nghề & trường (kế hoạch) ---------- */
+.img-slot { position: relative; margin: 0; overflow: hidden; background: var(--soft, var(--bg-tint)); }
+.img-slot svg, .img-slot img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.slot-tools { position: absolute; right: 10px; bottom: 10px; display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.slot-btn {
+  position: relative; display: inline-flex; align-items: center; min-height: 32px; padding: 5px 12px;
+  border-radius: 999px; border: 0; background: rgba(28, 53, 94, .78); color: #fff; font-size: 12.5px; font-weight: 600;
+  cursor: pointer; backdrop-filter: blur(4px);
+}
+.slot-btn:hover { background: var(--navy); }
+.slot-btn input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+.slot-btn:focus-within { outline: 3px solid rgba(49, 104, 210, .45); outline-offset: 2px; }
+
+.plan-visual { padding: 0; overflow: hidden; margin-bottom: 24px; }
+.pv-career { display: grid; grid-template-columns: 1.1fr 1fr; align-items: stretch; }
+.pv-career .img-slot { aspect-ratio: 8 / 5; }
+.pv-info { padding: 26px 28px; display: flex; flex-direction: column; gap: 8px; justify-content: center; }
+.pv-info .eyebrow { color: var(--c); margin: 0; }
+.pv-info h3 { font-size: 26px; }
+.pv-field { font-weight: 600; color: var(--c); font-size: 14px; }
+.pv-info p:not(.eyebrow):not(.pv-field) { color: var(--muted); font-size: 15px; }
+.pv-subjects b { color: var(--navy); }
+.pv-schools { padding: 24px 28px 8px; border-top: 1px solid var(--line); background: var(--bg-tint); }
+.pv-schools-head h3 { font-size: 17px; text-transform: uppercase; letter-spacing: .03em; }
+.pv-schools-head p { font-size: 13.5px; color: var(--muted); margin-top: 4px; }
+.school-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
+.school-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.school-card .img-slot { aspect-ratio: 16 / 9; background: #EAF2FF; }
+.sc-body { padding: 12px 14px 14px; }
+.sc-body h4 { margin: 0; font-size: 15px; color: var(--navy); line-height: 1.35; }
+.sc-major { font-size: 13.5px; color: var(--ink); margin-top: 4px; }
+.sc-city { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.pv-note { padding: 12px 28px 20px; font-size: 13px; color: var(--muted); background: var(--bg-tint); }
+
+.cd-hero .img-slot { aspect-ratio: 2 / 1; max-height: 300px; }
+.cd-schools { margin: 14px 28px 0; border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+.cd-schools h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--blue); margin-bottom: 8px; }
+.cd-schools ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.cd-schools li { display: flex; flex-direction: column; font-size: 14.5px; }
+.cd-schools li span { color: var(--muted); font-size: 13.5px; }
+
+@media (max-width: 860px) {
+  .pv-career { grid-template-columns: 1fr; }
+  .school-grid { grid-template-columns: 1fr 1fr; }
+  .cd-schools { margin: 12px 18px 0; }
+}
+@media (max-width: 600px) {
+  .school-grid { grid-template-columns: 1fr; }
+  .pv-info, .pv-schools { padding-left: 18px; padding-right: 18px; }
+  .pv-note { padding: 12px 18px 18px; }
+  .cd-hero .img-slot { aspect-ratio: 16 / 8; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
   .hero-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -404,5 +457,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .section { padding: 16px 0; }
   .card { box-shadow: none; }
   .results-grid { grid-template-columns: 1fr 1fr; }
-  .bar-fill { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .bar-fill, .img-slot, .plan-visual { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .slot-tools, .pv-note { display: none !important; }
+  .school-card, .pv-career { break-inside: avoid; }
 }

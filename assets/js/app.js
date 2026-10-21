@@ -46,6 +46,78 @@
     return '<svg viewBox="0 0 24 24" aria-hidden="true">' + ICONS[code] + "</svg>";
   }
 
+  /* ---------- Hình ảnh: minh họa SVG hoặc ảnh do học sinh tải lên ---------- */
+  var V = window.CN_VISUALS;
+  var IMG_PREFIX = "cn.img.";
+
+  function careerById(id) { return D.careers.filter(function (x) { return x.id === id; })[0]; }
+  function careerByName(name) {
+    var n = norm(name || "").trim();
+    if (!n) return null;
+    return D.careers.filter(function (c) { return norm(c.name) === n; })[0] || null;
+  }
+
+  function customImage(key) {
+    try { return localStorage.getItem(IMG_PREFIX + key); } catch (e) { return null; }
+  }
+
+  /* Khung ảnh: hiện ảnh tự tải nếu có, nếu không thì hiện hình minh họa */
+  function imageSlot(key, fallbackSvg, alt, editable) {
+    var src = customImage(key);
+    var inner = src ? '<img src="' + src + '" alt="' + esc(alt) + '">' : fallbackSvg;
+    var tools = "";
+    if (editable) {
+      tools = '<div class="slot-tools">' +
+        '<label class="slot-btn">Đổi ảnh<input type="file" accept="image/*" data-img-key="' + esc(key) + '"></label>' +
+        (src ? '<button type="button" class="slot-btn" data-img-reset="' + esc(key) + '">Dùng hình minh họa</button>' : "") +
+        "</div>";
+    }
+    return '<figure class="img-slot' + (src ? " has-photo" : "") + '">' + inner + tools + "</figure>";
+  }
+
+  /* Thu nhỏ ảnh trước khi lưu để không vượt dung lượng trình duyệt */
+  function readImage(file, cb) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var img = new Image();
+      img.onload = function () {
+        var max = 900, w = img.width, h = img.height, k = Math.min(1, max / Math.max(w, h));
+        var cv = document.createElement("canvas");
+        cv.width = Math.round(w * k); cv.height = Math.round(h * k);
+        cv.getContext("2d").drawImage(img, 0, 0, cv.width, cv.height);
+        cb(cv.toDataURL("image/jpeg", 0.82));
+      };
+      img.onerror = function () { cb(null); };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function bindImageSlots(root, rerender) {
+    $$("input[data-img-key]", root).forEach(function (inp) {
+      inp.addEventListener("change", function () {
+        var f = inp.files && inp.files[0];
+        if (!f) return;
+        readImage(f, function (data) {
+          if (!data) { toast("Không đọc được ảnh này, bạn thử ảnh khác nhé."); return; }
+          try {
+            localStorage.setItem(IMG_PREFIX + inp.getAttribute("data-img-key"), data);
+            toast("Đã cập nhật ảnh.");
+          } catch (e) {
+            toast("Trình duyệt hết chỗ lưu ảnh. Hãy xóa bớt ảnh hoặc dùng ảnh nhỏ hơn.");
+          }
+          rerender();
+        });
+      });
+    });
+    $$("[data-img-reset]", root).forEach(function (b) {
+      b.addEventListener("click", function () {
+        try { localStorage.removeItem(IMG_PREFIX + b.getAttribute("data-img-reset")); } catch (e) { /* bỏ qua */ }
+        rerender();
+      });
+    });
+  }
+
   /* ---------- Điều hướng ---------- */
   function initNav() {
     var toggle = $(".nav-toggle");
@@ -349,12 +421,14 @@
         }).join("") + "</div></div>" +
         '<button type="button" class="cd-close" aria-label="Đóng">×</button>' +
       "</div>" +
+      '<div class="cd-hero">' + imageSlot("career:" + c.id, V.careerScene(c, g), c.name, false) + "</div>" +
       '<div class="cd-body">' +
         block("Công việc", c.work, "#3168D2") +
         block("Kiến thức – kỹ năng", c.skills, "#1F8579") +
         block("Môn học liên quan", c.subjects, "#7D5BBE") +
         block("Hướng học tập", c.study, "#D27A12") +
       "</div>" +
+      schoolList(c) +
       '<p class="cd-source">Nguồn tham khảo: thông tin mang tính khái quát. Hãy kiểm chứng trên website chính thức của trường đào tạo, trung tâm hướng nghiệp và ghi lại nguồn trong kế hoạch của bạn.</p>' +
       '<div class="cd-actions">' +
         '<button type="button" class="btn btn-ghost" data-act="back">Quay lại danh mục</button>' +
@@ -366,8 +440,7 @@
     $('[data-act="plan"]', dialog).onclick = function () {
       closeCareer();
       $("#p-career").value = c.name;
-      if (!$("#p-skills").value) $("#p-skills").value = c.skills;
-      if (!$("#p-actions").value) $("#p-actions").value = c.study;
+      applyCareerToPlan(c, true);
       document.getElementById("plan").scrollIntoView({ behavior: "smooth" });
       toast("Đã điền sẵn nghề " + c.name + " vào kế hoạch.");
     };
@@ -375,6 +448,15 @@
     if (typeof dialog.showModal === "function") dialog.showModal();
     else dialog.setAttribute("open", "");
     document.body.classList.add("no-scroll");
+  }
+
+  function schoolList(c) {
+    var list = (D.schools && D.schools[c.id]) || [];
+    if (!list.length) return "";
+    return '<section class="cd-schools"><h3>Trường đào tạo tham khảo</h3><ul>' +
+      list.map(function (sc) {
+        return "<li><b>" + esc(sc.name) + "</b><span>" + esc(sc.major) + " • " + esc(sc.city) + "</span></li>";
+      }).join("") + "</ul></section>";
   }
 
   function block(title, text, color) {
@@ -394,12 +476,63 @@
   }
 
   /* ---------- Kế hoạch ---------- */
+  var planCareer = null;
+
+  /* Điền kỹ năng và việc cần làm theo nghề đã chọn. Chỉ ghi đè ô trống
+     hoặc ô còn giữ nội dung tự điền của nghề trước, không xóa nội dung học sinh tự viết. */
+  function applyCareerToPlan(c, announce) {
+    var prev = planCareer;
+    [["#p-skills", "skills"], ["#p-actions", "study"]].forEach(function (pair) {
+      var el = $(pair[0]);
+      var cur = el.value.trim();
+      if (!cur || (prev && cur === prev[pair[1]])) el.value = c[pair[1]];
+    });
+    planCareer = c;
+    renderPlanVisual();
+    if (announce) toast("Đã điền sẵn nghề " + c.name + " vào kế hoạch.");
+  }
+
+  function renderPlanVisual() {
+    var box = $("#plan-visual");
+    var c = planCareer;
+    if (!c) { box.hidden = true; return; }
+    var g = G[c.g];
+    var schools = (D.schools && D.schools[c.id]) || [];
+    box.hidden = false;
+    box.style.setProperty("--c", g.color);
+    box.style.setProperty("--soft", g.soft);
+    $("#pv-career").innerHTML =
+      imageSlot("career:" + c.id, V.careerScene(c, g), c.name, true) +
+      '<div class="pv-info">' +
+        '<p class="eyebrow">Nghề bạn chọn</p>' +
+        "<h3>" + esc(c.name) + "</h3>" +
+        '<p class="pv-field">' + esc(c.field) + " • Nhóm " + c.g + " (" + esc(g.name) + ")</p>" +
+        "<p>" + esc(c.work) + "</p>" +
+        '<p class="pv-subjects"><b>Môn học liên quan:</b> ' + esc(c.subjects) + "</p>" +
+      "</div>";
+    $("#school-grid").innerHTML = schools.map(function (sc, i) {
+      return '<article class="school-card">' +
+        imageSlot("school:" + sc.name, V.campusScene(sc, i), sc.name, true) +
+        '<div class="sc-body"><h4>' + esc(sc.name) + "</h4>" +
+        '<p class="sc-major">' + esc(sc.major) + "</p>" +
+        '<p class="sc-city">' + esc(sc.city) + "</p></div></article>";
+    }).join("");
+    bindImageSlots(box, renderPlanVisual);
+  }
+
   function initPlan() {
     var form = $("#plan-form");
     var saved = store.get(KEY_PLAN, null);
     if (saved) {
       Object.keys(saved).forEach(function (k) { if (form.elements[k]) form.elements[k].value = saved[k]; });
     }
+    planCareer = careerByName(form.elements.career.value);
+    renderPlanVisual();
+    form.elements.career.addEventListener("input", function () {
+      var c = careerByName(form.elements.career.value);
+      if (c && c !== planCareer) applyCareerToPlan(c, false);
+      else if (!c && planCareer) { planCareer = null; renderPlanVisual(); }
+    });
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var data = {};
@@ -417,6 +550,8 @@
     });
     $("#plan-clear").addEventListener("click", function () {
       form.reset();
+      planCareer = null;
+      renderPlanVisual();
       store.del(KEY_PLAN);
       $("#plan-msg").textContent = "";
       toast("Đã xóa kế hoạch.");

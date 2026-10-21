@@ -218,8 +218,20 @@
         <header class="section-head">
           <p class="eyebrow">Bước 5 • Kế hoạch của bạn</p>
           <h2>Kế hoạch phát triển bản thân</h2>
-          <p>Tự xác định bước tiếp theo để khám phá nghề nghiệp. Kế hoạch được lưu trên trình duyệt của bạn.</p>
+          <p>Chọn nghề bạn muốn tìm hiểu để xem hình ảnh đặc trưng của nghề, các trường đào tạo và tự đặt bước tiếp theo. Kế hoạch được lưu trên trình duyệt của bạn.</p>
         </header>
+
+        <div class="plan-visual card" id="plan-visual" hidden>
+          <div class="pv-career" id="pv-career"></div>
+          <div class="pv-schools">
+            <div class="pv-schools-head">
+              <h3>Trường có đào tạo ngành liên quan</h3>
+              <p>Ví dụ để tham khảo. Hãy kiểm tra ngành và phương thức tuyển sinh từng năm trên website chính thức của trường.</p>
+            </div>
+            <div class="school-grid" id="school-grid"></div>
+          </div>
+          <p class="pv-note">Hình vẽ là minh họa. Bấm <b>Đổi ảnh</b> để thay bằng ảnh thật bạn sưu tầm (ảnh chỉ lưu trên trình duyệt này).</p>
+        </div>
 
         <form class="card plan-form" id="plan-form">
           <ol class="plan-list">
@@ -294,6 +306,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="assets/js/data.js"></script>
+  <script src="assets/js/visuals.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
