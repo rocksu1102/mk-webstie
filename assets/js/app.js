@@ -64,22 +64,30 @@
   /* Khung ảnh: hiện ảnh tự tải nếu có, nếu không thì hiện hình minh họa */
   var COMMONS = "https://commons.wikimedia.org/wiki/";
 
-  /* Ảnh thật từ Wikimedia Commons, nằm đè lên hình minh họa.
-     Nếu ảnh không tải được thì tự gỡ để hiện lại hình minh họa. */
-  function commonsPhoto(file, alt) {
-    var f = encodeURIComponent(file);
-    var url = COMMONS + "Special:FilePath/" + f + "?width=1200";
-    /* Lớp nền mờ lấp đầy khung, ảnh chính hiện trọn vẹn không bị cắt */
-    return '<img class="photo-bg" src="' + url + '" alt="" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer">' +
-      '<img class="photo" src="' + url + '" alt="' + esc(alt) + '"' +
+  /* Ảnh thật của nghề: ưu tiên photoUrl (ảnh từ trang khác, kèm nguồn),
+     sau đó là tệp trên Wikimedia Commons. */
+  function photoOf(c) {
+    if (c.photoUrl) return { url: c.photoUrl, credit: c.photoCredit || "Nguồn ảnh", link: c.photoSource || c.photoUrl };
+    if (c.photo) {
+      var f = encodeURIComponent(c.photo);
+      return { url: COMMONS + "Special:FilePath/" + f + "?width=1200", credit: "Wikimedia Commons", link: COMMONS + "File:" + f };
+    }
+    return null;
+  }
+
+  /* Ảnh nằm đè lên hình minh họa; nếu không tải được thì tự gỡ để hiện lại hình minh họa.
+     Lớp nền mờ lấp đầy khung, ảnh chính hiện trọn vẹn không bị cắt. */
+  function remotePhoto(ph, alt) {
+    return '<img class="photo-bg" src="' + esc(ph.url) + '" alt="" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer">' +
+      '<img class="photo" src="' + esc(ph.url) + '" alt="' + esc(alt) + '"' +
       ' loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add(\'photo-failed\');this.remove()">' +
-      '<a class="photo-credit" href="' + COMMONS + "File:" + f + '" target="_blank" rel="noopener">Ảnh: Wikimedia Commons</a>';
+      '<a class="photo-credit" href="' + esc(ph.link) + '" target="_blank" rel="noopener">Ảnh: ' + esc(ph.credit) + "</a>";
   }
 
   function imageSlot(key, fallbackSvg, alt, editable, photo) {
     var src = customImage(key);
     var inner = src ? '<img src="' + src + '" alt="' + esc(alt) + '">' :
-      fallbackSvg + (photo ? commonsPhoto(photo, alt) : "");
+      fallbackSvg + (photo ? remotePhoto(photo, alt) : "");
     var tools = "";
     if (editable) {
       tools = '<div class="slot-tools">' +
@@ -436,7 +444,7 @@
         }).join("") + "</div></div>" +
         '<button type="button" class="cd-close" aria-label="Đóng">×</button>' +
       "</div>" +
-      '<div class="cd-hero">' + imageSlot("career:" + c.id, V.careerScene(c, g), c.name, false, c.photo) + "</div>" +
+      '<div class="cd-hero">' + imageSlot("career:" + c.id, V.careerScene(c, g), c.name, false, photoOf(c)) + "</div>" +
       '<div class="cd-body">' +
         block("Công việc", c.work, "#3168D2") +
         block("Kiến thức – kỹ năng", c.skills, "#1F8579") +
@@ -517,7 +525,7 @@
     box.style.setProperty("--c", g.color);
     box.style.setProperty("--soft", g.soft);
     $("#pv-career").innerHTML =
-      imageSlot("career:" + c.id, V.careerScene(c, g), c.name, true, c.photo) +
+      imageSlot("career:" + c.id, V.careerScene(c, g), c.name, true, photoOf(c)) +
       '<div class="pv-info">' +
         '<p class="eyebrow">Nghề bạn chọn</p>' +
         "<h3>" + esc(c.name) + "</h3>" +

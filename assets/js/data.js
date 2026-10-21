@@ -195,7 +195,8 @@ window.CN_DATA = {
   },
 
   /* Danh mục nghề. Nhóm thay hoặc bổ sung bằng nghề đã nghiên cứu và kiểm chứng.
-     photo: tên tệp ảnh trên Wikimedia Commons (ảnh giấy phép tự do), ví dụ "Electrician_Working.jpg". */
+     photo: tên tệp ảnh trên Wikimedia Commons (ảnh giấy phép tự do), ví dụ "Electrician_Working.jpg".
+     Hoặc photoUrl (link ảnh) + photoCredit (tên nguồn) + photoSource (link bài gốc) cho ảnh từ trang khác. */
   careers: [
     {
       id: "ky-thuat-vien-dien", photo: "Electrician_Working.jpg", g: "R", also: ["I"],
@@ -252,7 +253,11 @@ window.CN_DATA = {
       study: "Tìm hiểu ngành Khoa học dữ liệu, Hệ thống thông tin, Thống kê tại các trường đại học."
     },
     {
-      id: "thiet-ke-do-hoa", photo: "Pantural_graphic_designer.jpg", g: "A", also: ["E"],
+      id: "thiet-ke-do-hoa", g: "A",
+      photoUrl: "https://cms.rightpath.edu.vn/uploads/TKDH_2_C_7e4c5760af.jpg",
+      photoCredit: "RightPath",
+      photoSource: "https://rightpath.edu.vn/nganh-nghe/nganh-hoc/thiet-ke-do-hoa/ban-can-chuan-bi-gi-de-tro-thanh-nha-thiet-ke-do-hoa-chuyen-nghiep",
+      also: ["E"],
       name: "Nhà thiết kế đồ họa", field: "Thiết kế – mỹ thuật",
       short: "Tạo hình ảnh và nội dung số cho sản phẩm, thương hiệu.",
       work: "Thiết kế logo, poster, giao diện, ấn phẩm truyền thông; làm việc với khách hàng để hiểu ý tưởng và chỉnh sửa sản phẩm.",
